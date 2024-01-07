@@ -1,0 +1,50 @@
+---
+title: addType & defineProps
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# `addType` and `defineProps`
+
+This function will make new property and append it into curent `Property` and `Classes`.
+
+## `addType`
+
+### About
+
+`addType` function will have 2 parameter, first parameter is the type that will called its property, and it always be `string`. Second parameter is the property you want to call using the type before, and it must be an `Array` and you can add two or more property that you can called using type you make.
+
+### Usage
+
+```js
+addType(param1, param2);
+```
+
+## `defineProps`
+
+### About
+
+`defineProps` function. Its similiar to `addType` function, but it can make one or more property at once. The paramater needed must be an `Object`.
+
+### Usage
+
+```js
+defineProps({
+  string: [string, string],
+});
+```
+
+or
+
+```js
+defineProps({
+  box: ["property1"],
+  dx: ["property1", "property2", "property3"],
+  type1: ["property1", "property2"],
+});
+```
+
+:::tip
+If your type have 2 word that separated with '-', add '"' on the type like `"my-type"`
+:::

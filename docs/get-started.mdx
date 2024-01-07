@@ -1,0 +1,157 @@
+---
+title: Get Started
+sidebar_position: 2
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Getting Started
+
+## Installation
+
+Add tenoxui to your project using. You can install it using npm or simply attach the file hosted on CDN.
+
+### NPM
+
+NPM installation
+
+```bash
+npm i tenoxui@latest
+```
+
+or for react project :
+
+```html
+npm i @tenoxui/react
+```
+
+### CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tui.min.js"></script>
+```
+
+or esm module
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tui.esm.min.js"></script>
+```
+
+
+## React Environment
+
+### Install
+
+Add TenoxUI into your react project.
+
+```bash
+npm i tenoxui
+```
+
+or
+
+```sh
+npm i @tenoxui/react
+```
+
+### Configuration
+
+edit `src/App.jsx
+
+```jsx
+import { useEffect } from "react";
+import tenoxui from "tenoxui";
+
+const App = () => {
+  useEffect(() => {
+    tenoxui();
+  }, []);
+  return <h1 class="fs-1rem fw-500">Hello World</h1>;
+};
+
+export default App;
+```
+
+:::note
+using `useEffect` to apply the style to elements.
+:::
+
+### Besy way to add TenoxUI
+
+In this section, you will see more efficient way to styling your elements using TenoxUI.
+
+<Tabs>
+
+<TabItem value="app" label="App.jsx">
+
+First, you need to change some code in `src/App.jsx`
+
+```jsx
+// App.jsx
+
+import Styler from "./Styler";
+// optional
+import Navbar from "./component/Navbar";
+import Footer from "./component/Footer";
+
+const App = () => {
+  Styler();
+
+  return(
+    <>
+      <Navbar />
+      <main>
+        <header>
+          <h1 class="title"></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur.</p>
+        </header>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default App;
+```
+</TabItem>
+
+<TabItem value="styler" label="Styler.jsx">
+
+Make new file called `Styler.jsx` to store your type, property, and styles. Also, you can import it to others components as well.
+
+```jsx
+// Styler.jsx
+
+import { useEffect } from "react";
+import tenoxui, { defineProps, makeStyles } from "tenoxui";
+
+const Styler = () => {
+  useEffect(()=>{
+    let MyProps = {
+      scroll: ["scrollBehavior"],
+      haha: ["padding", "margin"],
+    };
+    // Define your style here
+    let myStyles = {
+      html: "scroll-smooth",
+      body: "bg-[background] m-0",
+      main:
+        "w-100% h-mn-100svh display-flex flex-parent-center p-2rem",
+      "h1.title": "fs-2.5rem fw-bold lh-2",
+    };
+    // Apply the style
+    defineProps(MyProps);
+    makeStyles(MyStyles);
+    tenoxui();
+  },[]);
+};
+
+export default Styler;
+```
+
+Now, the styler already defined, you can store your styles and propertty here. So, you can easily import your style again.
+
+</TabItem>
+
+</Tabs>

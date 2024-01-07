@@ -1,0 +1,57 @@
+---
+title: makeStyle
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# makeStyle function
+
+`makeStyle` allows you to apply Tenox Style by adding its className or new selector.
+
+## Usage
+
+<Tabs>
+  <TabItem value="html" label="HTML">
+    <p>Add some html code</p>
+    ```html
+    <div class="new-class"></div>
+    ```
+  </TabItem>
+
+  <TabItem value="js" label="JS">
+<p>Make a style using `makeStyle`</p>
+```js
+makeStyle(".new-class", "p-2rem m-1rem bg-[primary-700], br-1rem");
+```
+
+:::tip
+
+Don't forget to add your selector, you can use class, id, attribute, and others selector on first parameter.
+
+:::
+
+  </TabItem>
+  <TabItem value="jsx" label="JSX">
+    <p>Here is simple JSX code:</p>
+```jsx
+import React, { useEffect } from "react";
+import tenoxui, { makeStyle } from "tenoxui";
+/* other Code goes here */
+
+function App() {
+
+    useEffect(() => {
+        makeStyle(".new-class", "p-2rem m-1rem bg-[primary-700] br-1rem");
+        tenoxui();
+    }, []);
+
+    return <div class="new-class"></div>;
+
+}
+export default App;
+```
+
+
+ </TabItem>
+</Tabs>
