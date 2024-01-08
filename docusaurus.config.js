@@ -39,6 +39,12 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        sitemap: {
+          changefreq: "weekly",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
+        },
         docs: {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
@@ -78,7 +84,22 @@ const config = {
             label: "GitHub",
             position: "right",
           },
+          {
+            href: "https://www.jsdelivr.com/package/npm/tenoxui",
+            label: "JSDelivr",
+            position: "right",
+          },
         ],
+      },
+      colorMode: {
+        defaultMode: "dark",
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
       },
       footer: {
         style: "light",
@@ -101,37 +122,62 @@ const config = {
             ],
           },
           {
-            title: "Community",
+            title: "Projects",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "TUI Components",
+                href: "https://twitter.com/nousantx/tenoxui-component",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: "tnk7css",
+                href: "https://twitter.com/nousantx/tnk7css",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "React Lab",
+                href: "https://github.com/nousantx/react-tui",
+              },
+              {
+                label: "TenoxUI Website",
+                href: "https://github.com/nousantx/tenoxui-website",
               },
             ],
           },
           {
-            title: "Other Links",
+            title: "Project Links",
             items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
               {
                 label: "GitHub",
                 href: "https://github.com/nousantx/tenoxui",
               },
+              {
+                label: "NPM",
+                href: "https://www.npmjs.com/package/tenoxui",
+              },
+              {
+                label: "JSDelivr",
+                href: "https://www.jsdelivr.com/package/npm/tenoxui",
+              },
+            ],
+          },
+          {
+            title: "About me",
+            items: [
+              {
+                label: "GitHub",
+                href: "https://github.com/nousantx",
+              },
+              {
+                label: "Instagram",
+                href: "https://instagram.com/nousantx",
+              },
+              {
+                label: "Twitter",
+                href: "https://x.com/nousantx",
+              },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} TenoxUI by NOuSantx`,
+        copyright: `Copyright © ${new Date().getFullYear()} NOuSantx. Built with Docusaurus`,
       },
       prism: {
         theme: prismThemes.github,
