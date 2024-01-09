@@ -7,6 +7,8 @@ const Styler = () => {
 
     makeStyles({
       ".fx-ctr, .fx-center": "display-flex flex-parent-center",
+      ".absolute": "post-absolute",
+      ".relative": "post-relative",
       ".w-full,.w-mx": "w-100%",
       ".h-full,.h-mx": "h-100%",
       ".fx-wrap,.flex-wrap": "fxw-wrap",

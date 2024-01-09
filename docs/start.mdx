@@ -32,10 +32,10 @@ npm i tenoxui@latest
 <script src="https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tui.min.js"></script>
 ```
 
-or ESM :
+or esm module
 
-```html
-<script src="https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tui.esm.min.js"></script>
+```js
+import tenoxui from 'https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tui.esm.min.js'
 ```
 
 ## React Environment
@@ -45,6 +45,12 @@ or ESM :
 Add TenoxUI into your react project.
 
 ```bash
+npm i tenoxui
+```
+
+or
+
+```sh
 npm i @tenoxui/react
 ```
 
@@ -69,7 +75,9 @@ export default App;
 ```
 
 :::note
+
 using `useEffect` to apply the style to elements.
+
 :::
 
 ### React Usage Example
@@ -91,6 +99,7 @@ import Footer from "./component/Footer";
 import Styler from "./Styler";
 
 const App = () => {
+
   Styler();
 
   return (
@@ -117,7 +126,8 @@ export default App;
 
 Make new file called `Styler.jsx` to store your type, property, and styles. Also, you can import it to others components as well.
 
-```jsx title="Styler.jsx"
+```jsx
+// Styler.jsx
 
 import { useEffect } from "react";
 import tenoxui, { defineProps, makeStyles } from "@tenoxui/react";
