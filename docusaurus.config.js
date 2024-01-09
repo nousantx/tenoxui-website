@@ -8,7 +8,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "TenoxUI",
+  title: "TenoxUI Docs",
   tagline: "Fast and Lightweight CSS Framework",
   favicon: "img/favicon.ico",
 
@@ -64,7 +64,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/tenoxui_social_card.jpg",
       navbar: {
         title: "TenoxUI",
         logo: {
