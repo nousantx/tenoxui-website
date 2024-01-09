@@ -52,6 +52,13 @@ const config = {
         },
         blog: {
           showReadingTime: true,
+          readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+            frontMatter.hide_reading_time
+              ? undefined
+              : defaultReadingTime({ content }),
+          blogTitle: "TenoxUI blog!",
+          blogDescription: "TenoxUI Blogs!",
+          blogSidebarTitle: "All posts",
         },
         theme: {
           customCss: "./src/css/custom.css",

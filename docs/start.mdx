@@ -32,7 +32,7 @@ npm i tenoxui@latest
 <script src="https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tui.min.js"></script>
 ```
 
-or esm module
+or use ESM :
 
 ```js
 import tenoxui from 'https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tui.esm.min.js'
@@ -59,7 +59,6 @@ npm i @tenoxui/react
 edit `src/App.jsx
 
 ```jsx title="App.jsx"
-
 import { useEffect } from "react";
 import tenoxui from "@tenoxui/react";
 
@@ -91,7 +90,6 @@ In this section, you will see more efficient way to styling your elements using 
 First, you need to edit a few line of code in `src/App.jsx`
 
 ```jsx title="App.jsx"
-
 // Other Components
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
@@ -120,15 +118,19 @@ export default App;
 
 ```
 
+:::tip
+
+Now, you dont need to add `useEffect` to every component, just make it one and store your style there, so you can call it on every components you want.
+
+:::
+
 </TabItem>
 
 <TabItem value="styler" label="Styler.jsx">
 
 Make new file called `Styler.jsx` to store your type, property, and styles. Also, you can import it to others components as well.
 
-```jsx
-// Styler.jsx
-
+```jsx title="Styler.jsx"
 import { useEffect } from "react";
 import tenoxui, { defineProps, makeStyles } from "@tenoxui/react";
 

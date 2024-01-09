@@ -23,7 +23,6 @@ This simple code you can copy and try it :
 Add some element in html.
 
 ```html title="index.html"
-
 <!-- Adding color css class -->
 <header>
   <h1 class="tc-white">Some Title</h1>
@@ -42,7 +41,6 @@ Add some element in html.
 Add some css variable that can be called in html.
 
 ```css title="style.css"
-
 :root {
   --primary: #09cf5c;
   --secondary: #c45210;
@@ -66,7 +64,6 @@ This simple code you can copy and try it :
 Add some element in html.
 
 ```html title="index.html"
-
 <section class="bg-black">
   <div class="box-[box-size] bg-red m-0.8em"></div>
   <div class="box-[box-size] bg-[primary] m-0.8em"></div>
@@ -88,7 +85,6 @@ Add some element in html.
 Add some css variable that can be called in html.
 
 ```css title="style.css"
-
 :root {
   --primary: #09cf5c;
   --box-size: 50px;
@@ -124,7 +120,6 @@ There's a few color that you can use directly on the className :
 All color that available in css is valid on TenoxUI. Like, red, blue, yellow, lightblue, tomato, and more, its all valid in TenoxUI and you can just type it this way:
 
 ```html title="index.html"
-
 <div class="bg-red">
   <h1 class="tc-blue">Some Text</h1>
 </div>
@@ -142,7 +137,6 @@ pkg install tenoxui
 HEX color is also valid in TenoxUI. You domt need to add `#` to define it.
 
 ```html title="index.html"
-
 <div class="bg-f00">
   <h1 class="tc-0d0d0d">Some Text</h1>
 </div>
@@ -153,7 +147,6 @@ HEX color is also valid in TenoxUI. You domt need to add `#` to define it.
 
 You can use RGB & RGBA color in your element with `{type}-rgb()` or `{type}-rgba()`. Here's some example
 ```html title="index.html"
-
 <div class="bg-rgb(255,0,255)">
   <h1 class="tc-rgb(255,255,255,0.6)">Some Text</h1>
 </div>
@@ -165,7 +158,6 @@ You can use RGB & RGBA color in your element with `{type}-rgb()` or `{type}-rgba
 If you want to use HEX, RGB, and RGBA color, you must import a function called `moreColor` if you're using ES Module environment like ReactJS.
 
 ```jsx title="App.jsx"
-
 import tenoxui, { moreColor, ... } from "@tenoxui/react";
 
 ...
@@ -184,7 +176,6 @@ import tenoxui, { moreColor, ... } from "@tenoxui/react";
 You can also define color from css variable by using `{type}-[cssVarName]`
 
 ```html title="index.html"
-
 <div class="bg-[back]">
   <h1 class="tc-[primary-200]">Cool Title!</h1>
 </div>
@@ -192,7 +183,6 @@ You can also define color from css variable by using `{type}-[cssVarName]`
 ```
 
 ```css title="style.css"
-
 :root {
   --primary: #ff0000;
   --back: #0d0d0d;
