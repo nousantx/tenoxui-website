@@ -1,5 +1,6 @@
 ---
-title: FLexbox
+title: Flexbox
+description: Learn about flexbox layout and its configuration
 ---
 
 import Tabs from "@theme/Tabs";
@@ -10,44 +11,31 @@ import TabItem from "@theme/TabItem";
 
 Flexbox is a one-dimensional layout system that we can use to create a row or a column axis layout. It makes our life easier to design and build responsive web pages without having to use tricky hacks and a lot of float and position properties in our CSS code.
 
-## Display Flex
+## display-flex
 
-To setting display property you can use `display-{value}` to the display property. In this case you can use `display-flex` : Set `display: flex;` for element.
+To setting display property you can use `display-{displayValue}`. In this case you can use `display-flex` : Set `display: flex;` for element.
 
 ## Flex Direction
 
+You can set `flex-direction` property by using `fd-` type. Here's some value you can use :
 
+`td-row` : `flex-direction: row`
 
-<Tabs>
-  <TabItem value="width" label="Width">
+`td-column` : `flex-direction: column`
 
-### Width Property
+:::warning[I can't use row-reverse?]
 
-`w-` : Set `width` to the element.
+I recommend you to store the value on css variable first, because 2-words value is not supported. Learn more about [2-words value](/docs/extras/all-value#1-two-word-value).
 
-`w-mn-` : Set `min-width` to the element.
-
-`w-mx-` : Set `max-width` to the element.
-
-</TabItem>
-
-<TabItem value="height" label="Height">
-
-### Height Property
-
-`h-` : Set `height` to the element.
-
-`h-mn-` : Set `min-height` to the element.
-
-`h-mx-` : Set `max-height` to the element.
-
-</TabItem>
-
-</Tabs>
-
-
-:::tip
-
-You can also use `% (percent)` as the unit. Such as `w-100%` and so on.`
+```html title="html"
+<div class="fd-[col-rev]">...</div>
+```
+```css title="css"
+:root {
+  --row-rev: row-reverse;
+  --col-rev: column-reverse;
+}
+```
 
 :::
+
