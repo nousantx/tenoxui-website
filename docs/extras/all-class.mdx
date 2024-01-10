@@ -1,0 +1,184 @@
+---
+title: All Classes
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+
+# All Classes
+
+Explore All Class and Property that you can use or already defined by TenoxUI.
+
+
+
+## Align 
+Align for Box Property :
+
+- `ai` : `align-items`
+- `ac` : `align-content`
+- `as` : `align-self`
+
+## Background
+Background Property :
+
+- `bg` : `background`
+- `bg-size` : `background-size`
+- `bg-clip` : `background-clip`
+- `bg-repeat` : `background-repeat`
+- `bg-loc` : `background-position`
+- `bg-loc-x` : `background-position-x`
+- `bg-loc-y` : `background-position-y`
+- `bg-blend` : `background-blend`
+
+## Border
+Border Property :
+
+- `br` : `border-radius`
+- `bw` : `border-width`
+- `bs` : `border-style`
+- `radius-tl` : `border-top-left-radius`
+- `radius-bl` : `border-bottom-left-radius`
+- `radius-tr` : `border-top-right-radius`
+- `radius-br` : `border-bottom-right-radius`
+- `radius-top`: [ `br-tl`, `br-tr` ],
+- `radius-bottom`: [ `br-bl`, `br-br` ],
+- `radius-left`: [ `br-tl`, `br-bl` ],
+- `radius-right`: [ `br-tr`, `br-br` ],
+
+## Cursor
+
+Set cursor property :
+
+- `curs`, `cursor`: `cursor`
+
+## Display
+
+Set display property :
+
+- `display`, `dis`: `display`
+
+## Filter
+Filter Property :
+
+- `blur` : `filter: blur();`
+- `brightness` : `filter: brightness();`
+- `contrast` : `filter: contrast();`
+- `grayscale` : `filter: grayscale();`
+- `hue-rotate` : `filter: hue-rotate();`
+- `saturate` : `filter: saturate();`
+- `sepia` : `filter: sepia();`
+
+## Flexbox Layout
+Flexbox Property :
+
+- `fx`, `flex` : `flex`
+- `auto-flex`, `fx-auto` : `flex: 1 1 {value};`
+- `fx-wrap`: `flex-wrap`
+- `fx-grow` : `flex-grow`
+- `fx-shrink` : `flex-shrink`
+- `fx-basis` : `flex-basis`
+- `gap` : `gap`
+- `item-order` : `order`
+- `ai` : `align-items`
+- `jc` : `justify-content`
+
+## Justify 
+Justify for Box Property :
+
+- `ji` : `justify-items`
+- `jc` : `justify-content`
+- `js` : `justify-self`
+
+## Margin
+Margin Property :
+
+- `p`: `margin`
+- `pt`: `margin-top`
+- `pb`: `margin-bottom`
+- `pl`: `margin-left`
+- `ph`: `margin-right`
+- `pr`: `margin-right`
+- `pv`: [ `margin-top`, `margin-bottom` ]
+- `ph`: [ `margin-left`, `margin-right` ]
+
+
+## Padding
+Padding Property :
+
+- `p`: `padding`
+- `pt`: `padding-top`
+- `pb`: `padding-bottom`
+- `pl`: `padding-left`
+- `ph`: `padding-right`
+- `pr`: `padding-right`
+- `pv`: [ `padding-top`, `padding-bottom` ]
+- `ph`: [ `padding-left`, `padding-right` ]
+
+## Opacity & Visibility
+Opacity and visibility:
+
+- `opa`: `opacity`
+- `visibility`: `visibility`
+
+## Overflow
+Overflow property :
+
+- `over`: `overflow`
+- `overX`: `overflowX`
+- `overY`: `overflowY`
+
+## Position
+Position Property :
+
+- `post`, `position` : `position`
+- `t`, `top` : `top`
+- `b`, `bottom` : `bottom`
+- `l`, `left` : `left`
+- `r`, `right` : `right`
+- `z`, `z-index` : `z-index`
+
+## Rotate
+Rotate property :
+
+- `rt`: `rt`
+
+## Scale
+Scale property :
+
+- `scale`: `scale`
+
+## Transition
+Transition property :
+
+- `tr`: `transition`
+- `tr-delay`: `transition-delay`
+- `tr-prop`: `transition-property`
+- `tr-time`: `transition-duration`
+- `tr-timing`: `transition-timing-function`
+
+## Width
+
+- `w`: `width`
+- `w-mn`: `min-width`
+- `w-mx`: `max-width`
+
+## Custom Type and Property
+
+You can make your own type and property by using [addType and defineProps](/docs/function/addtype-and-defineprops) function. Here's simple usage :
+
+```html title="html"
+<div class="my-box-type-300px"></div>
+<div class="my-bg-type-blue"></div>
+```
+```js title="javascript"
+defineProps({
+  boxs: ["-webkit-box-sizing"],
+  "my-box-type": ["width", "height"],
+  "my-bg-type": ["background-color"]
+})
+```
+
+## Closing
+
+See current available type and property on [GitHub Repository](https://github.com/nousantx/tenoxui/blob/main/src/js/lib/property.js).

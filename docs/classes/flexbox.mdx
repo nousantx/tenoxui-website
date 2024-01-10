@@ -17,6 +17,8 @@ To setting display property you can use `display-{displayValue}`. In this case y
 
 :::tip
 
+### Using Display Property
+
 Use `display-{value}` to change the display property.
 
 ```html
@@ -28,15 +30,104 @@ Use `display-{value}` to change the display property.
 
 ## Flex Wrap
 
-Setting flec-wrap by just using
+You can use `fx-wrap-` type to change `flex-wrap` property value.
+
+### Basic Usage
+
+recommended way to use `flex-wrap` property.
+
+<Tabs>
+<TabItem value="html">
+
+Adding some few html element with flex wrapper.
+
+```html title="index.html"
+<div class="flex flex-wrap ai-stretch jc-center gap-1rem">
+  <div class="fx-200px bg-[primary] p-1rem">...</div>
+  <div class="fx-200px bg-[primary] p-1rem">...</div>
+  <div class="my-class">...</div>
+</div>
+```
+</TabItem>
+<TabItem value="javascript">
+
+Just make new class using `moreStyles` function.
+
+```js title="script.js"
+import { makeStyles } from 'tenoxui'
+
+let myStyles = {
+  ".flex": "display-flex",
+  ".flex-wrap": "fx-wrap-wrap",
+  ".my-class": "auto-flex-200px bg-[primary] p-1rem",
+  // Other Class
+}
+
+makeStyles(myStyles);
+```
+</TabItem>
+</Tabs>
+
+
+## Flex Property
+
+The flex property sets the flexible length on flexible items. You can use `fx-`, `flex-` for `flex` property, or `auto-flex-` which have value `flex: 1 1 {value}`. Also there's another type you can use :
+
+- `fx` or `flex` : `flex: {value};`
+
+-  `fx-auto` or `auto-flex` : `flex: 1 1 {value};`
+
+- `fx-grow` : `flex-grow: {value};`
+
+- `fx-basis` : `flex-basis: {value};`
+
+- `fx-shrink` : `flex-shrink: {value};`
+
+- `fx-wrap` : `flex-wrap: {value};`
+
+### Digging More
+
+
+<Tabs>
+<TabItem value="html">
+
+Adding some few html element with flex wrapper.
+
+```html title="index.html"
+<div class="flex flex-wrap ...">
+  <div class="auto-flex-200px bg-red">...</div>
+  <div class="auto-flex-200px bg-red">...</div>
+  <div class="my-flex bg-red">...</div>
+</div>
+```
+</TabItem>
+<TabItem value="javascript">
+
+Just make new class using `moreStyles` function.
+
+```js title="script.js"
+import { makeStyles } from 'tenoxui'
+
+let myStyles = {
+  ".flex": "display-flex",
+  ".flex-wrap": "fx-wrap-wrap",
+  ".my-flex": "fx-shrink-1 flex-grow-1 flex-basis-200px",
+  // Other Class
+}
+
+makeStyles(myStyles);
+```
+</TabItem>
+</Tabs>
+
 
 ## Flex Direction
 
 You can set `flex-direction` property by using `fd-` type. Here's some value you can use :
 
-`td-row` : `flex-direction: row`
+`td-row` : `flex-direction: row;`
 
-`td-column` : `flex-direction: column`
+`td-column` : `flex-direction: column;`
 
 :::warning[I can't use row-reverse?]
 
