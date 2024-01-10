@@ -1,3 +1,7 @@
+/*!
+ * Using TenoxUI v0.4.24 ESM
+ */
+
 import React, { useEffect } from "react";
 import tenoxui, { addType, makeStyles } from "tenoxui";
 
