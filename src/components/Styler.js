@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import tenoxui, { addType, makeStyles } from "./tui/tui.js";
+import tenoxui, { addType, makeStyles } from "tenoxui";
 
 const Styler = () => {
   useEffect(() => {

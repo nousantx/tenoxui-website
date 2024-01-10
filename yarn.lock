@@ -7764,10 +7764,10 @@ tapable@^2.0.0, tapable@^2.1.1, tapable@^2.2.0:
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
   integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
-tenoxui@^0.4.23:
-  version "0.4.23"
-  resolved "https://registry.yarnpkg.com/tenoxui/-/tenoxui-0.4.23.tgz#3dab8fbcd5b12f4245ca826f92472f3139e98bf0"
-  integrity sha512-M310iwhBzaZYkLKd/lur46xMKpAf2JDwEDiWNEFsvZ1mXt2/7PWcAD6Cn+l1V+UncYjd3ptnNc3KrwBjx4aZ9A==
+tenoxui@^0.4.24:
+  version "0.4.24"
+  resolved "https://registry.yarnpkg.com/tenoxui/-/tenoxui-0.4.24.tgz#ec334814953545c8a138127251cd5e7bde3ea77f"
+  integrity sha512-00ah4tz9d+Bm59SzEwCMoWfqiT9dS07m4hRhbm7qQKB4w1yz3V2vW2KOQVXYBScuTz1q29JWH2L4wDozD4GARw==
 
 terser-webpack-plugin@^5.3.7, terser-webpack-plugin@^5.3.9:
   version "5.3.10"
