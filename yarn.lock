@@ -1953,6 +1953,11 @@
   dependencies:
     defer-to-connect "^2.0.1"
 
+"@tenoxui/react@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@tenoxui/react/-/react-1.0.1.tgz#46eab52d51bf3314d5876a40684c658032030728"
+  integrity sha512-sTAzDpzTszkKh+EJXBTIxlYmOs0DMIFEIHv39asZASn0vtRa/VF84NSDFtBs3IYNiJKgNj5fYM4BrMQbNVu1jQ==
+
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.2.0.tgz#cccaab758af56761eb7bf37af6f03f326dd798ad"
@@ -7764,7 +7769,7 @@ tapable@^2.0.0, tapable@^2.1.1, tapable@^2.2.0:
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
   integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
-tenoxui@^0.4.24:
+tenoxui@0.4.24:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/tenoxui/-/tenoxui-0.4.24.tgz#ec334814953545c8a138127251cd5e7bde3ea77f"
   integrity sha512-00ah4tz9d+Bm59SzEwCMoWfqiT9dS07m4hRhbm7qQKB4w1yz3V2vW2KOQVXYBScuTz1q29JWH2L4wDozD4GARw==

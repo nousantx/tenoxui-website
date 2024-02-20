@@ -10,17 +10,25 @@ import TabItem from "@theme/TabItem";
 
 Explore All Class and Property that you can use or already defined by TenoxUI.
 
-
-
 ## Align 🎯
-Align for Box Property :
-
 - `ai` : `align-items`
 - `ac` : `align-content`
 - `as` : `align-self`
 
+## Aspect Ratio 🌌
+
+- `ratio` : `aspect-ratio`
+
+## Backdrop Filter 🏖️
+
+- `back-blur` : `backdrop-filter: blur();`
+- `back-brightness` : `backdrop-filter: brightness();`
+- `back-contrast` : `backdrop-filter: contrast();`
+- `back-grayscale` : `backdrop-filter: grayscale();`
+- `back-saturate` : `backdrop-filter: saturate();`
+- `back-sepia` : `backdrop-filter: sepia();`
+
 ## Background 🖼️
-Background Property :
 
 - `bg` : `background`
 - `bg-size` : `background-size`
@@ -32,14 +40,13 @@ Background Property :
 - `bg-blend` : `background-blend`
 
 ## Border 🛡️
-Border Property :
 
 - `bdr` : `border`
 - `br` : `border-radius`
 - `bw` : `border-width`
 - `bs` : `border-style`
 - `bc` : `border-color`
-- `border`: `border-color`. On `moreColor` only.
+- `border` : `border-color`. On `moreColor` only.
 - `bw-top` : `border-top-width`
 - `bw-bottom` : `border-bottom-width`
 - `bw-left` : `border-left-width`
@@ -48,25 +55,30 @@ Border Property :
 - `radius-bl` : `border-bottom-left-radius`
 - `radius-tr` : `border-top-right-radius`
 - `radius-br` : `border-bottom-right-radius`
-- `radius-top`: [ `br-tl`, `br-tr` ],
-- `radius-bottom`: [ `br-bl`, `br-br` ],
-- `radius-left`: [ `br-tl`, `br-bl` ],
-- `radius-right`: [ `br-tr`, `br-br` ],
+- `radius-top` : [ `br-tl`, `br-tr` ],
+- `radius-bottom` : [ `br-bl`, `br-br` ],
+- `radius-left` : [ `br-tl`, `br-bl` ],
+- `radius-right` : [ `br-tr`, `br-br` ],
+- `br-ss` : `border-start-start-radius`
+- `br-se` : `border-start-end-radius`
+- `br-ee` : `border-end-end-radius`
+- `br-es` : `border-end-start-radius`
+- `bw-is` : `border-inline-start-width`
+- `bw-ie` : `border-inline-end-width`
+
+## box-sizing 🖥️
+
+- `box-sizing` : `box-sizing`
 
 ## Cursor 🖱️
 
-Set cursor property :
-
-- `curs`, `cursor`: `cursor`
+- `curs`, `cursor` : `cursor`
 
 ## Display 🚀
 
-Set display property :
-
-- `display`, `dis`: `display`
+- `display`, `dis` : `display`
 
 ## Filter 📷
-Filter Property :
 
 - `blur` : `filter: blur();`
 - `brightness` : `filter: brightness();`
@@ -77,106 +89,152 @@ Filter Property :
 - `sepia` : `filter: sepia();`
 
 ## Flexbox 📦
-Flexbox Property :
 
 - `fx`, `flex` : `flex`
-- `auto-flex`, `fx-auto` : `flex: 1 1 {value};`
-- `fx-wrap`: `flex-wrap`
+- `auto-flex`, `flex-auto`, `fx-auto` : `flex: 1 1 {value};`
+- `initial-flex` : `flex: 0 1 {value}`
+- `fx-wrap` : `flex-wrap`
 - `fx-grow` : `flex-grow`
 - `fx-shrink` : `flex-shrink`
 - `fx-basis` : `flex-basis`
 - `gap` : `gap`
-- `item-order` : `order`
+- `item-order`, `order` : `order`
 - `ai` : `align-items`
 - `jc` : `justify-content`
+- `flex-parent`, `fx-par` : [`justify-content`, `align-items`]
+
+## Float ☁️
+
+- `float` : `float`
+
+## Font & Text ⌨️
+
+- `fs` : `fontSize`
+- `fw` : `fontWeight`
+- `lh` : `lineHeight`
+- `ls` : `letterSpacing`
+- `ta` : `text-align`
+- `tc` : `color`
+- `ts` : `textStyle`
+- `td` : `textDecoration`
+- `ti` : `textIndent`
+- `tn` : `textReansform`
+- `ws` : `wordSpacing`
+- `family` : `fontFamily`
+- `text-style` : `fontStyle`
+- `white-space` : `whiteSpace`
+- `text-over` : `textOverflow`
+- `text-wrap` : `textWrap`
+- `v-align` : `verticalAlign`
+- `w-break` : `wordBreak`
+- `wrap-over` : `overflowWrap`
+- `hyphens` : `hyphens`
 
 ## Height 📏
-Height property :
 
-- `h`: `height`
-- `h-mn`: `min-height`
-- `h-mx`: `max-height`
+- `h` : `height`
+- `h-mn` : `min-height`
+- `h-mx` : `max-height`
+
+## Isolation 📎
+
+- `isolation`, `isolate` : `isolation`
 
 ## Justify 🌌
-Justify for Box Property :
 
 - `ji` : `justify-items`
 - `jc` : `justify-content`
 - `js` : `justify-self`
 
-## Margin ↔️
-Margin Property :
+## List Style 🗒️
 
-- `p`: `margin`
-- `pt`: `margin-top`
-- `pb`: `margin-bottom`
-- `pl`: `margin-left`
-- `ph`: `margin-right`
-- `pr`: `margin-right`
-- `pv`: [ `margin-top`, `margin-bottom` ]
-- `ph`: [ `margin-left`, `margin-right` ]
+- `list-s` : `list-style`
+- `list-s-img` : `list-style-image`
+- `list-s-pos` : `list-style-position`
+- `list-s-type` : `list-style-type`
+
+## Margin ↔️
+
+- `m` : `margin`
+- `mt` : `margin-top`
+- `mb` : `margin-bottom`
+- `ml` : `margin-left`
+- `mh` : `margin-right`
+- `mr` : `margin-right`
+- `mv` : [ `margin-top`, `margin-bottom` ]
+- `mh` : [ `margin-left`, `margin-right` ]
 
 ## Padding ↔️
-Padding Property :
 
-- `p`: `padding`
-- `pt`: `padding-top`
-- `pb`: `padding-bottom`
-- `pl`: `padding-left`
-- `ph`: `padding-right`
-- `pr`: `padding-right`
-- `pv`: [ `padding-top`, `padding-bottom` ]
-- `ph`: [ `padding-left`, `padding-right` ]
+- `p` : `padding`
+- `pt` : `padding-top`
+- `pb` : `padding-bottom`
+- `pl` : `padding-left`
+- `ph` : `padding-right`
+- `pr` : `padding-right`
+- `pv` : [ `padding-top`, `padding-bottom` ]
+- `ph` : [ `padding-left`, `padding-right` ]
 
 ## Opacity & Visibility 🔍
-Opacity and visibility:
 
-- `opa`: `opacity`
-- `visibility`: `visibility`
+- `opa` : `opacity`
+- `visibility` : `visibility`
+
+## Outline ☑️
+
+- `ol` : `outline`
+- `ol-offset` : `outline-offset`
+- `ol-style` : `outline-style`
+- `ol-width` : `outline-width`
 
 ## Overflow ⬆️
 Overflow property :
 
-- `over`: `overflow`
-- `overX`: `overflowX`
-- `overY`: `overflowY`
+- `over` : `overflow`
+- `overX` : `overflowX`
+- `overY` : `overflowY`
 
 ## Position 📍
-Position Property :
 
 - `post`, `position` : `position`
 - `t`, `top` : `top`
 - `b`, `bottom` : `bottom`
 - `l`, `left` : `left`
 - `r`, `right` : `right`
-- `z`, `z-index` : `z-index`
+- `z`, `zi` : `z-index`
 
-## Rotate 🔄
-Rotate property :
+## Transform 🔁
 
-- `rt`: `rotate`
-
-## Scale 📐
-Scale property :
-
-- `scale`: `scale`
+- `transform` : `transform`
+- `translate` : `transform: translate()`
+- `matrix` : `transform: matrix()`
+- `matrix-3d` : `transform: matrix3d()`
+- `move-x` : `transform: translateX()`
+- `move-y` : `transform: translateY()`
+- `move-z` : `transform: translateZ()`
+- `rt` : `transform: rotate()`
+- `rt-3d` : `transform: rotate3d()`
+- `scale` : `transform: scale()`
+- `scale-x` : `transform: scaleX()`
+- `scale-y` : `transform: scaleY()`
+- `scale-z` : `transform: scalez()`
+- `skew` : `transform: skew()`
+- `skew-x` : `transform: skewX()`
+- `skew-y` : `transform: skewY()`
 
 ## Transition 🔄
-Transition property :
 
-- `tr`: `transition`
-- `tr-delay`: `transition-delay`
-- `tr-prop`: `transition-property`
-- `tr-time`: `transition-duration`
-- `tr-timing`: `transition-timing-function`
+- `tr` : `transition`
+- `tr-delay` : `transition-delay`
+- `tr-prop` : `transition-property`
+- `tr-time` : `transition-duration`
+- `tr-timing` : `transition-timing-function`
 
 ## Width 📐
 
-Width Property :
-
-- `w`: `width`
-- `w-mn`: `min-width`
-- `w-mx`: `max-width`
+- `w` : `width`
+- `w-mn` : `min-width`
+- `w-mx` : `max-width`
 
 ## Custom Type and Property ✨
 

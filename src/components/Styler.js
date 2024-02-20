@@ -3,7 +3,7 @@
  */
 
 import React, { useEffect } from "react";
-import tenoxui, { addType, makeStyles } from "tenoxui";
+import tenoxui, { addType, makeStyles } from "./tui.esm.js";
 
 const Styler = () => {
   useEffect(() => {
