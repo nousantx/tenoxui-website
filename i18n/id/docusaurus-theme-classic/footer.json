@@ -1,0 +1,70 @@
+{
+  "link.title.Docs": {
+    "message": "Dokumentasi",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Projects": {
+    "message": "Proyek",
+    "description": "The title of the footer links column with title=Projects in the footer"
+  },
+  "link.title.Project Links": {
+    "message": "Link Proyek",
+    "description": "The title of the footer links column with title=Project Links in the footer"
+  },
+  "link.title.About me": {
+    "message": "Tentang Saya",
+    "description": "The title of the footer links column with title=About me in the footer"
+  },
+  "link.item.label.Type and Property": {
+    "message": "Type and Property",
+    "description": "The label of footer link with label=Type and Property linking to /docs/category/classes"
+  },
+  "link.item.label.Function": {
+    "message": "Function",
+    "description": "The label of footer link with label=Function linking to /docs/category/function"
+  },
+  "link.item.label.Extras": {
+    "message": "Extras",
+    "description": "The label of footer link with label=Extras linking to /docs/category/extras"
+  },
+  "link.item.label.TUI Components": {
+    "message": "TUI Components",
+    "description": "The label of footer link with label=TUI Components linking to https://twitter.com/nousantx/tenoxui-component"
+  },
+  "link.item.label.tnk7css": {
+    "message": "tnk7css",
+    "description": "The label of footer link with label=tnk7css linking to https://twitter.com/nousantx/tnk7css"
+  },
+  "link.item.label.React Lab": {
+    "message": "React Lab",
+    "description": "The label of footer link with label=React Lab linking to https://github.com/nousantx/react-tui"
+  },
+  "link.item.label.TenoxUI Website": {
+    "message": "TenoxUI Website",
+    "description": "The label of footer link with label=TenoxUI Website linking to https://github.com/nousantx/tenoxui-website"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/nousantx"
+  },
+  "link.item.label.NPM": {
+    "message": "NPM",
+    "description": "The label of footer link with label=NPM linking to https://www.npmjs.com/package/tenoxui"
+  },
+  "link.item.label.JSDelivr": {
+    "message": "JSDelivr",
+    "description": "The label of footer link with label=JSDelivr linking to https://www.jsdelivr.com/package/npm/tenoxui"
+  },
+  "link.item.label.Instagram": {
+    "message": "Instagram",
+    "description": "The label of footer link with label=Instagram linking to https://instagram.com/nousantx"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "The label of footer link with label=Twitter linking to https://x.com/nousantx"
+  },
+  "copyright": {
+    "message": "Copyright © 2024 NOuSantx. Dibangun dengan Docusaurus",
+    "description": "The footer copyright"
+  }
+}

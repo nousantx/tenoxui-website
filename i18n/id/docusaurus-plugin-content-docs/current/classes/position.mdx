@@ -1,0 +1,95 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Position 📍
+
+In this page, you will learn about `position` using TenoxUI.
+
+## Type Rules
+
+<Tabs>
+  <TabItem value="position" label="Position">
+
+### Position Rules
+
+You can add position property by using `position-` and `post-` class. Here is the example:
+
+**`post-absolute`** : Set `position: absolute;`.
+
+**`post-fixed`** : Set `position: fixed;`.
+
+and so on.
+
+:::tip[recommended way to add position]
+
+Just define it using `defineProps` and you can just define it first 😉.
+
+```js
+defineProps({
+  ".fixed": "post-fixed",
+  ".absolute, .abso": "post-absolute",
+  ".relative, .rela": "post-relative",
+});
+```
+
+Oh, and don't forget to add selector. Almost all selector are supported.
+
+:::
+
+</TabItem>
+
+<TabItem value="offset" label="Offset">
+
+### Margin Rules
+
+**`t-`** : Set `top` property from its container.
+
+**`l-`** : Set `left` property from its container.
+
+**`b-`** : Set `bottom` property from its container.
+
+**`r-`** : Set `right` property from its container.
+
+:::tip
+
+You make new type with `addType` or `defineProps` for make new rule with offset position. Like this:
+
+```js
+/*
+  This code will make new type called `top-left-`
+  it will change `top` and `left` value at -
+  the same time.
+*/
+
+addType("top-left", ["top", "left"]);
+```
+
+Learn more about [`addType` and `defineProps`](/docs/function/addtype-and-defineprops) function.
+
+:::
+
+</TabItem>
+
+<TabItem value="zindex" label="z-index">
+
+You can set the `z-index` property using `z-` type. Like this :
+
+```html
+<div class="z-10"></div>
+```
+
+:::note[Using negative value]
+
+You can use negative value by adding `-{n}` to the value. Like this :
+
+```html
+<div class="z--99"></div>
+```
+
+See [`Min Value`](/docs/extras/all-value#4-min-value) rule.
+
+:::
+
+</TabItem>
+
+</Tabs>

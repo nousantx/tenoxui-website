@@ -7,6 +7,7 @@ import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
 import Styler from "../components/Styler";
 import "../css/tenox-icon.css";
+import Translate, {translate} from "@docusaurus/Translate"
 
 function HomepageHeader() {
   Styler();
@@ -20,15 +21,16 @@ function HomepageHeader() {
           <i className="txi ti-vtx_part_2 fs-10rem tc-[ifm-color-primary] absolute"></i>
         </div>
         <h1 className="hero__title">
-          Tenox<span className="tc-[ifm-color-primary]">UI</span> Docs
+<Translate> </Translate>
+          Tenox<span className="tc-[ifm-color-primary]">UI</span> <Translate>Docs</Translate>
         </h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle"><Translate>Fast and Lightweight CSS Framework.</Translate></p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/start"
           >
-            Start Learning ✨
+            <Translate>Start Learning ✨</Translate>
           </Link>
         </div>
       </div>

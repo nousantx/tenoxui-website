@@ -31,7 +31,14 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "id"],
+    localeConfigs: {
+      en: {
+        htmlLang: "en-GB",
+        label: "English",
+      },
+      id: { htmlLang: "id-ID", label: "Indonesia" },
+    },
   },
 
   presets: [
@@ -86,6 +93,10 @@ const config = {
             label: "Docs",
           },
           { to: "/blog", label: "Blog", position: "right" },
+          {
+            type: "localeDropdown",
+            position: "left",
+          },
           {
             href: "https://github.com/nousantx/tenoxui",
             label: "GitHub",

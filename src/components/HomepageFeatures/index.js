@@ -2,49 +2,50 @@ import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
 import "../../css/google-icons.css";
-import Styler from "../Styler.js"
+import Styler from "../Styler.js";
+import Translate, { translate } from "@docusaurus/Translate";
 
 const FeatureList = [
   {
-    title: "Fast and Lightweight",
+    title: <Translate>Fast and Lightweight</Translate>,
     icons: "bolt",
     description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
+      <Translate>
+        The majority of classes are managed through JavaScript, ensuring a
+        lightweight and fast user experience.
+      </Translate>
     ),
   },
   {
-    title: "Utility-First",
+    title: <Translate>Utility-First</Translate>,
     icons: "sort",
     description: (
-      <>
+      <Translate>
         Seamlessly apply pre-defined utility classes to elements by simply
         invoking their associated classes, fostering a utility-first approach to
         styling.
-      </>
+      </Translate>
     ),
   },
   {
-    title: "No CSS",
+    title: <Translate>No CSS</Translate>,
     icons: "css",
     description: (
-      <>
+      <Translate>
         No more generated CSS files. Elevate your design journey as styles are
         seamlessly applied directly to each element, unleashing simplicity and
         efficiency.
-      </>
+      </Translate>
     ),
   },
   {
-    title: "Tailored To Your Taste",
+    title: <Translate>Tailored To Your Taste</Translate>,
     icons: "draw",
     description: (
-      <>
+      <Translate>
         Easily customize your unique style with user-friendly configuration
         options, providing a personalized and bespoke design experience.
-      </>
+      </Translate>
     ),
   },
 ];

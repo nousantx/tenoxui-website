@@ -1,0 +1,191 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Color 🎨
+
+In this page you will learn how to change color for text, background, border ( maintained ), and you can also learn for using `css variable` and apply it into element.
+
+## Text Color
+
+You can use `tc-` type to change the color of the text of the element.
+
+### Usage Example
+
+This simple code you can copy and try it :
+
+<Tabs>
+<TabItem value='html' label='index.html'>
+
+Add some element in html.
+
+```html title="index.html"
+<!-- Adding color css class -->
+<header>
+  <h1 class="tc-white">Some Title</h1>
+  <p class="tc-ddd">Some text</p>
+</header>
+<!-- Color from CSS -->
+<header>
+  <h1 class="tc-[primary]">Some Title</h1>
+  <p class="tc-[secondary]">Some text</p>
+</header>
+```
+
+</TabItem>
+
+<TabItem value='css' label='style.css'>
+Add some css variable that can be called in html.
+
+```css title="style.css"
+:root {
+  --primary: #09cf5c;
+  --secondary: #c45210;
+}
+```
+
+</TabItem>
+</Tabs>
+
+## Background Color
+
+We define `background-color` not as `bc` type, but its merged it with `bg` type. So, if you want to change the background color, you can just use `bg` type.
+
+### Usage Example
+
+This simple code you can copy and try it :
+
+<Tabs>
+<TabItem value='html' label='index.html'>
+Add some element in html.
+
+```html title="index.html"
+<section class="bg-black">
+  <div class="box-[box-size] bg-red m-0.8em"></div>
+  <div class="box-[box-size] bg-[primary] m-0.8em"></div>
+  <div class="box-[box-size] bg-[gradient-back] m-0.8em"></div>
+</section>
+```
+
+:::info[What is box?]
+
+`box-` type is TenoxUI's type that can change `width` and `height` at the same time.
+
+:::
+
+</TabItem>
+
+<TabItem value='css' label='style.css'>
+Add some css variable that can be called in html.
+
+```css title="style.css"
+:root {
+  --primary: #09cf5c;
+  --box-size: 50px;
+  --gradient-back: linear-gradient(to right, red, blue);
+}
+```
+
+:::tip[using background-image]
+
+You can also define image for the background or `background-image` and call it using `bg-` type:
+
+```html title="index.html"
+<div class="bg-[back] m-0.8em"></div>
+```
+
+```css title="style.css"
+:root {
+  --back: url("image.png");
+}
+```
+
+:::
+
+</TabItem>
+</Tabs>
+
+## Supported Inline Color
+
+There's a few color that you can use directly on the className :
+
+### 1. Color Name
+
+All color that available in css is valid on TenoxUI. Like, red, blue, yellow, lightblue, tomato, and more, its all valid in TenoxUI and you can just type it this way:
+
+```html title="index.html"
+<div class="bg-red">
+  <h1 class="tc-blue">Some Text</h1>
+</div>
+```
+
+Color name will always be string.
+
+```bash
+pkg install tenoxui
+```
+
+### 2. HEX Color
+
+HEX color is also valid in TenoxUI. You domt need to add `#` to define it.
+
+```html title="index.html"
+<div class="bg-f00">
+  <h1 class="tc-0d0d0d">Some Text</h1>
+</div>
+```
+
+### 3. RGB & RGBA
+
+You can use RGB & RGBA color in your element with `{type}-rgb()` or `{type}-rgba()`. Here's some example
+
+```html title="index.html"
+<div class="bg-rgb(255,0,255)">
+  <h1 class="tc-rgb(255,255,255,0.6)">Some Text</h1>
+</div>
+```
+
+:::info[More color usage]
+
+If you want to use HEX, RGB, and RGBA color, you must import a function called `moreColor` if you're using ES Module environment like ReactJS.
+
+```jsx title="App.jsx"
+import tenoxui, { moreColor, ... } from "@tenoxui/react";
+
+...
+  useEffect(()=>{
+    moreColor();
+    tenoxui();
+  },[])
+...
+
+```
+
+:::
+
+### 4. Css Variable
+
+You can also define color from css variable by using `{type}-[cssVarName]`
+
+```html title="index.html"
+<div class="bg-[back]">
+  <h1 class="tc-[primary-200]">Cool Title!</h1>
+</div>
+```
+
+```css title="style.css"
+:root {
+  --primary: #ff0000;
+  --back: #0d0d0d;
+  /* Other Variable */
+}
+```
+
+:::tip
+
+All type in TenoxUI support css variable, and you can use it by adding bracket and add the variable name insiden of it.
+
+```txt title="Type Rule"
+{type}-[variable]
+```
+
+:::

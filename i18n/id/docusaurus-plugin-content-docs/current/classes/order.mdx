@@ -1,0 +1,42 @@
+---
+title: Element Order 🔢
+description: How to reorder elements with order property.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Order 🔢
+
+You can use the order property to assign a positive or negative integer value to reorder the items.
+
+## Type Rules
+
+You can change the `order` property of the element by using `item-order-{value}` type.
+
+## Simple Usage
+
+<Tabs>
+<TabItem value="html" label="HTML">
+
+This is using flexbox, learn more about [flexbox](/docs/classes/flexbox)
+
+```html title="html"
+<div class="flex ai-center jc-center flex-wrap">
+  <div class="fx-100px bg-red"></div>
+  <div class="fx-100px item-order-1 bg-blue"></div>
+  <div class="fx-100px bg-green"></div>
+</div>
+```
+
+</TabItem>
+<TabItem value="js" label="JS">
+
+Style used in html file.
+
+```js title="script.js"
+test;
+```
+
+</TabItem>
+</Tabs>

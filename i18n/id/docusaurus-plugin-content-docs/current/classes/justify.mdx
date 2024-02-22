@@ -1,0 +1,38 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Justify Property 🌌
+
+Learn how to use Justify property for flexbox and grid layout
+
+## Type Rules
+
+There's some type you can use for align the items:
+
+- `ji-` : Set `justify-items` property
+
+- `jc-` : Set `justify-content` property
+
+- `js-` : Set `justify-self` property
+
+## Simple Usage
+
+<Tabs>
+<TabItem value="html" label="index.html">
+Add some html code, also 2-words value is not supported, so we will use value from css variables.
+```html title="html"
+<div class="ai-center jc-[sb]"></div>
+```
+</TabItem>
+<TabItem value="css" label="style.css">
+Add some value that will be used in html.
+```css title="css"
+:root {
+  --sb: space-between;
+}
+```
+</TabItem>
+</Tabs>
+:::tip[Two word value]
+Keep in mind if you wan't to use 2-words value like `flex-start`, `space-between`, and others. Because, it's not supported value like that. But, you can see the alternative way, see [2-words value](/docs/extras/all-value#1-two-word-value).
+:::

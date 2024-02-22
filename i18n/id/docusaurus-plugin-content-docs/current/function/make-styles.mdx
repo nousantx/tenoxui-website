@@ -1,0 +1,55 @@
+---
+title: makeStyles
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# makeStyles function
+
+Now, we will take a look to `makeStyles` function. It will retreive one parameter which is a object. You can define the styles you want inside of it.
+
+## Usage
+
+<Tabs>
+  <TabItem value="html" label="HTML">
+    <p>Add some html element:</p>
+
+    ```html
+    <div class="new-class"></div>
+    <div id="new-id"></div>
+    <div class="some-box">
+      <h1>Hello</h1>
+    </div>
+    ```
+
+    <p>You can add more element if you want</p>
+
+  </TabItem>
+
+  <TabItem value="js" label="JS">
+<p>You can apply style for elements you want :</p>
+```js
+makeStyles({
+
+    ".new-class": "box-100px bg-red br-8px p-1rem",
+
+    "#new-id": "box-50px bg-blue",
+
+    ".some-box": "display-flex flex-parent-center",
+
+    ".some-box > h1": "fs-3rem fw-500 tc-[primary-500]",
+
+});
+
+```
+
+:::tip
+
+Don't forget to add your selector, you can use class, id, attribute, and others selector on first parameter.
+
+:::
+
+      </TabItem>
+    </Tabs>
+```

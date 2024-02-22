@@ -1,0 +1,104 @@
+---
+title: Value 📑
+description: Explore all supporter value when you're using TenoxUI.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Define Value
+
+In this page you will learn about what supported and unsupported value when define type and value. Also, you will have the example of usage for every value exmplained.
+
+## Supported Value
+
+On the first version of TenoxUI css framework, its just recognize numeric value, and just few css units. But now, you can use both numeric and alphabetical value, and also most of css units are supported.
+
+### 1. Numerical Value
+
+Numeric values can be integers, decimals, fractions, or other numerical formats. The numerical value example such as :
+
+```html title="html"
+<h1 class="m-8px">8 pixels of margin</h1>
+<h1 class="fs-2.3rem">2.3rem of font-size</h1>
+<h1 class="tc-lightgreen">lightgreen color</h1>
+```
+
+### 2. Alphabetical Value
+
+Alphabetical value is value associated with letters in the alphabet. The value example such as :
+
+```html title="html"
+<div class="display-flex">
+  <h1 class="fw-bold">Hello</h1>
+</div>
+```
+
+### 3. Css Variable
+
+You can also use css variable as value for your element
+
+<Tabs>
+<TabItem value='html' label='index.html'>
+
+```html title="html"
+<div class="bdr-[border]">
+  <h1 class="tc-[primary]">Hello</h1>
+</div>
+```
+
+</TabItem>
+<TabItem value='css' label='style.css'>
+```css title="css"
+:root {
+  --primary: #red;
+  --border: 1px solid blue;
+}
+```
+</TabItem>
+</Tabs>
+
+### 4. Min Value
+
+You can add negative value like `-10rem` or `-100%` by typing '-' twice. Here is the few exampl>
+
+**`t--100px`** : its same as `top: -100px;`
+
+**`rt--100px`** : its same as `rotate: -45deg;`
+
+**`z--999`** : its same as `z-index: -999;`
+
+:::tip
+
+`%` Is one of CSS unit that also valid in TenoxUI.
+
+```jsx
+<div className="w-100% h-50% p-10% bg-[primary-300]">
+  <h1>Some Text</h1>
+</div>
+```
+
+:::
+
+## Unsupported Value
+
+### 1. Two Word Value
+
+Unfortunately, you can't use the value that have two word or value separater with '-'. Because, tenoxui will treat the last word as a value. In any case like in `grid-item-row-{value}` or `fx-basis-{value}`, also, in type like `justify-content` or `flex-direction` property, sometimes you want to put value like `flex-start` or even `column-reverse`. For this such case, i recommend you to store the value to css variable instead. Just like this:
+
+```html title="html"
+<!-- `ai-` is align-items type -->
+<div class="... ai-[flex-start] fd-[col-rev]">
+  <h1 class="display-[ib]">Hello</h1>
+</div>
+```
+
+Add some css :
+
+```css title="css"
+:root {
+  --flex-start: flex-start;
+  --col-rev: column-reverse;
+  --ib: inline-block;
+}
+```

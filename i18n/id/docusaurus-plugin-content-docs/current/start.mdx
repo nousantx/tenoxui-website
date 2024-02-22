@@ -1,0 +1,178 @@
+---
+sidebar_position: 1
+title: Ayo Mulai!
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Selamat Datang!
+
+Selamat datang di halaman dokumentasi TenoxUI. Di dalam website ini kalian akan belajar mengenai penggunaan, best practice, dan juga mengenal fungsi - fungsi yang terdapat didalam TenoxUI.
+
+## Tentang
+
+TenoxUI adalah sebuah Utility-First CSS Framework yang di buat untuk memudahkan para developer web dengan mengedepankan kecepatan dan efisiensi. TenoxUI memiliki banyak tipe kelas yang bisa kalian gunakan untuk membantu menentukan gaya atau style dari proyek kalian.
+
+
+## Instalasi
+
+Add tenoxui to your project using. You can install it using npm or simply attach the file hosted on CDN.
+Ada beberapa cara yang bisa kalian gunakan untuk menambahkan TenoxUI kedalam proyek kalian, yaitu dengan meng-instal menggunakan NPM dan yang kedua dengan menggunakan CDN.
+
+### NPM
+
+Instalasi menggunakan NPM
+
+```bash
+npm i tenoxui@latest --save-dev
+```
+
+### CDN
+
+Menambahkan script tenoxui kedalam proyek.
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tui.min.js"></script>
+```
+
+Atau module :
+
+```js
+import tenoxui from "https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tui.esm.min.js";
+```
+
+## React Environment
+
+### Instal
+
+Menerapkan TenoxUI kedalam proyek ReactJS
+
+```bash
+npm i tenoxui
+```
+
+atau
+
+```sh
+npm i @tenoxui/react
+```
+
+### Konfigurasi
+
+Mengubah `src/App.jsx
+
+```jsx title="App.jsx"
+import { useEffect } from "react";
+import tenoxui from "@tenoxui/react";
+
+const App = () => {
+  useEffect(() => {
+    tenoxui();
+  }, []);
+  return <h1 className="fs-1rem fw-500">Hello World</h1>;
+};
+
+export default App;
+```
+
+:::note
+
+Menggunakan `useEffect` agar style bisa diterapkan secara real-time kedalam elemen.
+
+:::
+
+### Contoh Penggunaan di React Project
+
+Berikut adalah cara yang efisien untuk menggunakan tenoxui kedalam proyek reactjs kalian.
+
+<Tabs>
+
+<TabItem value="app" label="App.jsx">
+
+Pertama, edit beberapa baris kode di `src/App.jsx`
+
+```jsx title="App.jsx"
+// Komponen Lainnya
+import Navbar from "./component/Navbar";
+import Footer from "./component/Footer";
+// Menimport Styler
+import Styler from "./Styler";
+
+const App = () => {
+  Styler(); // ini adalah fungsi styler
+
+  return (
+    <>
+      <Navbar />
+      <main>
+        <header>
+          <h1 className="title"></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur.</p>
+        </header>
+      </main>
+      <Footer />
+    </>
+  );
+};
+
+export default App;
+```
+
+:::tip
+
+Now, you dont need to add `useEffect` to every component, just make it one and store your style there, so you can call it on every components you want.
+
+:::
+
+</TabItem>
+
+<TabItem value="styler" label="Styler.jsx">
+
+Make new file called `Styler.jsx` to store your type, property, and styles. Also, you can import it to others components as well.
+Buat file baru dengan nama `Styler.jsx` untuk menyimpan seluruh tipe, properti, kelas, dan juga gaya. Setelah itu, kamu bisa menggunakan fungsi `Styler` di setiap component.
+
+
+```jsx title="Styler.jsx"
+import { useEffect } from "react";
+import tenoxui, { defineProps, makeStyles } from "@tenoxui/react";
+
+const Styler = () => {
+  useEffect(() => {
+    // Menyimpan `properti` custom
+    let MyProps = {
+      scroll: ["scrollBehavior"],
+      haha: ["padding", "margin"],
+    };
+
+    // Menyimpan gaya dalam sebuah objek
+    let myStyles = {
+      // Style `smooth-scrolling` untuk elemen html
+      html: "scroll-smooth",
+      // Style lainnya
+      body: "bg-[background] m-0",
+      main: "w-100% h-mn-100svh display-flex flex-parent-center p-2rem",
+      "h1.title": "fs-2.5rem fw-bold lh-2",
+    };
+
+    // menerapkan properti baru
+    defineProps(MyProps);
+    // menerapkan/menyimpan style
+    makeStyles(MyStyles);
+
+    tenoxui(); // me re-inisialisasi tenoxui
+  }, []);
+};
+
+export default Styler;
+```
+
+Sekarang, semua sudah di konfigurasi dengan baik, Let's Start!!
+
+</TabItem>
+
+</Tabs>
+
+## Penutup
+
+Sekarang kalian sudah mengenal apa itu TenoxUI, dan sekarang saatnya untuk mengeksplorasi lebih dalam mengenai tipe, properti, dan juga fungsi yang bisa kalian gunakan. Let's Gooo!!

@@ -1,0 +1,42 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Overflow ⬆️
+
+Despite its not ocassionally used, but gotchu.
+
+## Type Rules
+
+**`over-`** : Set `overflow` property.
+
+**`overX-`** : Set `overflowX` property.
+
+**`overY-`** : Set `overflowY` property.
+
+## Supported Value
+
+`hidden`, `auto`, `visible`, `scroll`, and `overlay`.
+
+:::info[Pro tip]
+
+Single-word values such as "hidden," "center," and others are functional and supported. If you intend to use two-word values like "space-between," "row-reverse," and others, I recommend wrapping them with CSS variables first and utilizing brackets for the call.
+
+<Tabs>
+<TabItem value="html" label="HTML">
+```html
+<div class="flex ai-center jc-[sb] fd-column gap-1rem">
+  <h1 class="fs-1.5rem tc-[primary]">Hello</h1>
+</div>
+```
+</TabItem>
+<TabItem value="css" label="CSS">
+```css
+:root {
+  --sb: space-between;
+  --primary: #d3e602;
+}
+```
+</TabItem>
+</Tabs>
+
+:::

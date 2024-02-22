@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "Selanjutnya",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Classes": {
+    "message": "Kelas - Kelas",
+    "description": "The label for category Classes in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Classes.link.generated-index.description": {
+    "message": "Eksplor seluruh tipe, properti, dan kelas yang bisa kalian gunakan. Eksplor Sekarang Juga!",
+    "description": "The generated-index page description for category Classes in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Function": {
+    "message": "Fungsi - Fungsi",
+    "description": "The label for category Function in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Function.link.generated-index.description": {
+    "message": "Eksplor seluruh fungsi yang dapat membantu dan mempermudab penggunaan TenoxUI dan meningkatkan effisiensi.",
+    "description": "The generated-index page description for category Function in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Extras": {
+    "message": "Ekstra",
+    "description": "The label for category Extras in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Extras.link.generated-index.description": {
+    "message": "Beberapa informasi ekstra yang mungkin bisa menambah wawasan anda mengenai TenoxUI.",
+    "description": "The generated-index page description for category Extras in sidebar tutorialSidebar"
+  }
+}

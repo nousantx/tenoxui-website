@@ -1,0 +1,54 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Transform 🔁
+
+Setting `transform` property using tenoxui. There's various function you can use to transform your element.
+
+## Type and Property
+
+- `transform` : `transform`
+- `translate` : `transform: translate()`
+- `matrix` : `transform: matrix()`
+- `matrix-3d` : `transform: matrix3d()`
+- `move-x` : `transform: translateX()`
+- `move-y` : `transform: translateY()`
+- `move-z` : `transform: translateZ()`
+- `rt` : `transform: rotate()`
+- `rt-3d` : `transform: rotate3d()`
+- `scale` : `transform: scale()`
+- `scale-x` : `transform: scaleX()`
+- `scale-y` : `transform: scaleY()`
+- `scale-z` : `transform: scalez()`
+- `skew` : `transform: skew()`
+- `skew-x` : `transform: skewX()`
+- `skew-y` : `transform: skewY()`
+
+## Stacking Class
+
+It's possible for you to stacking className and it will cause no error.
+
+```html title="html"
+<div class="... rt-45deg move-x-3rem"></div>
+```
+
+## CSS Variable Value
+
+You can always use value from css variable.
+
+<Tabs>
+  <TabItem value="html" label="HTML">
+    Call value using `transform` type in html
+    ```html title="index.html"
+    <div class="transform-[my-transform]"></div>
+    ```
+  </TabItem>
+  <TabItem value="css" label="CSS">
+    Add your css variable
+    ```css title="style.css"
+    :root {
+      --my-transform: scale(2) rotate(125deg) translateX(100px);
+    }
+    ```
+  </TabItem>
+</Tabs>

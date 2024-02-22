@@ -5,13 +5,16 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
+    "start-locale-id": "docusaurus start --locale id",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "translate-id": "docusaurus write-translations --locale id",
+    "docs-id": "cp -r docs/** i18n/id/docusaurus-plugin-content-docs/current"
   },
   "dependencies": {
     "@docusaurus/core": "3.1.0",

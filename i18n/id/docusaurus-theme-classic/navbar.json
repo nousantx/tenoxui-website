@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "TenoxUI",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "TenoxUI Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Docs": {
+    "message": "Dokumentasi",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  },
+  "item.label.JSDelivr": {
+    "message": "JSDelivr",
+    "description": "Navbar item with label JSDelivr"
+  }
+}

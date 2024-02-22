@@ -1,0 +1,83 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Filter 📸
+
+Giving filter for element using class. There's a few filter you can use with this type :
+
+## 1. Blur
+
+Give blur into an element using `blur-{value}` type.
+
+```html title="html"
+<div class=" ... blur-20px"></div>
+```
+
+## 2. Brightness
+
+Set brightness of element using `brightness-{value}` type.
+
+```html title="html"
+<div class=" ... brightness-100%"></div>
+```
+
+## 3. Contrast
+
+`contrast-{value}` type will adjust the contrastness of the elements.
+
+```html title="html"
+<div class=" ... contrast-40%"></div>
+```
+
+## 4. Grayscale
+
+`grayscale-{value}` type will adjust grayscale of the elements.
+
+```html title="html"
+<div class=" ... grayscale-40%"></div>
+```
+
+:::info[pro tip]
+
+You also can more than one filter in one element.
+
+```html title="html"
+<div class="saturate-40% blur-50px hue-rotate-50deg">
+  <h1 class="invert">Hey</h1>
+</div>
+```
+
+:::
+
+## 5. Hue Rotate
+
+`hue-rotate-{value}` will applies a hue-rotation to the element.
+
+```html title="html"
+<div class=" ... hue-rotate-250deg"></div>
+```
+
+## 6. Invert
+
+`invert` or `invert-{value}` type will invert your elements.
+
+```html title="html"
+<div class=" ... invert"></div>
+<div class=" ... invert-80%"></div>
+```
+
+## 7. Saturate
+
+`saturate-{value}` type will saturate your elements.
+
+```html title="html"
+<div class=" ... saturate-40%"></div>
+```
+
+## 8. Sepia
+
+`sepia-{value}` type will sepia your elements.
+
+```html title="html"
+<div class=" ... sepia-40%"></div>
+```
