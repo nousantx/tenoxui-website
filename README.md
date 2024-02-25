@@ -26,5 +26,5 @@ This command generates static content into the `build` directory and can be serv
 
 ### Contributing
 
-See [CONTRIBUTING.md](https://github.com/nousantx/tenoxui-website/tree/main/RAEADME.md) to see more.
+See [CONTRIBUTING.md](https://github.com/nousantx/tenoxui-website/tree/main/CONTRIBUTING.md) to see more.
 
