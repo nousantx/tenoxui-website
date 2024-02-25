@@ -39,7 +39,7 @@ Have an idea for a new feature or improvement? [Open an issue](https://github.co
 #### Linter
 It not necessary to use code beautify, linter, or prettier since the documentation is written using `md` and `mdx` file. But, please provide clean and understanding code.
 
-### Translation Guide
+### Translation Guidelines
 
 Currently, the only translations available are English and Indonesian, we welcoming to everyone willingly to translate our documentation into another language, it will help us reach more user and contributor.
 
