@@ -18,7 +18,9 @@ Have an idea for a new feature or improvement? [Open an issue](https://github.co
 2. Ensure your code adheres to our [coding standards](#coding-standards) and follows the existing style.
 3. Make sure to write clear, concise commit messages.
 4. Test your changes thoroughly, including running any existing tests.
-5. Submit a pull request (PR) to the `main` branch and provide a detailed description of your changes.
+5. Make sure the code is `running` and `built` successfully.
+6. If there an error, please re-evaluate the code.
+7. Submit a pull request (PR) to the `main` branch and provide a detailed description of your changes.
 
 ### Pull Request Guidelines
 
@@ -34,6 +36,10 @@ Have an idea for a new feature or improvement? [Open an issue](https://github.co
 - Review the document for grammatical correctness and clarity of expression.
 
 #### Linter
-- It not necessary to use code beautify, linter, or prettier since the documentation is written using `md` and `mdx` file. But, please provide clean and understanding code.
+It not necessary to use code beautify, linter, or prettier since the documentation is written using `md` and `mdx` file. But, please provide clean and understanding code.
+
+### Translation Guide
+
+Currently, the only translations available are English and Indonesian, we welcoming to everyone willingly to translate our documentation into another language, it will help us reach more user and contributor.
 
 Thank you for your contribution!
