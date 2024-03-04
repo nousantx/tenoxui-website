@@ -21,8 +21,7 @@ function HomepageHeader() {
           <i className="txi ti-vtx_part_2 fs-10rem tc-[ifm-color-primary] absolute"></i>
         </div>
         <h1 className="hero__title">
-<Translate> </Translate>
-          Tenox<span className="tc-[ifm-color-primary]">UI</span> <Translate>Docs</Translate>
+          <Translate>TenoxUI Docs</Translate>
         </h1>
         <p className="hero__subtitle"><Translate>Fast and Lightweight CSS Framework.</Translate></p>
         <div className={styles.buttons}>
@@ -43,7 +42,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`Homepage | ${siteConfig.title}`}
+      title="TenoxUI Docs"
       description="Welcome to TenoxUI Documentation Page"
     >
       <HomepageHeader />
