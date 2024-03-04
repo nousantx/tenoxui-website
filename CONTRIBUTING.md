@@ -21,6 +21,7 @@ Have an idea for a new feature or improvement? [Open an issue](https://github.co
 5. Make sure the code is `running` and `built` successfully.
 6. If there an error, please re-evaluate the code.
 7. Submit a pull request (PR) to the `main` branch and provide a detailed description of your changes.
+8. If you don't know what to do, please see [TASK.md](TASK.md) to see newest tasks that must be completed.
 
 ### Pull Request Guidelines
 
@@ -38,7 +39,7 @@ Have an idea for a new feature or improvement? [Open an issue](https://github.co
 #### Linter
 It not necessary to use code beautify, linter, or prettier since the documentation is written using `md` and `mdx` file. But, please provide clean and understanding code.
 
-### Translation Guide
+### Translation Guidelines
 
 Currently, the only translations available are English and Indonesian, we welcoming to everyone willingly to translate our documentation into another language, it will help us reach more user and contributor.
 
