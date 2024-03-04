@@ -56,6 +56,7 @@ const config = {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" li
+editUrl: "https://github.com/nousantx/tenoxui-website/tree/main/"
         },
         blog: {
           showReadingTime: true,
