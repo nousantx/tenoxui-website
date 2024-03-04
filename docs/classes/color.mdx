@@ -29,8 +29,8 @@ Add some element in html.
   <h1 class="tc-[primary]">Some Title</h1>
   <p class="tc-[secondary]">Some text</p>
 </header>
-
 ```
+
 </TabItem>
 
 <TabItem value='css' label='style.css'>
@@ -41,11 +41,10 @@ Add some css variable that can be called in html.
   --primary: #09cf5c;
   --secondary: #c45210;
 }
-
 ```
+
 </TabItem>
 </Tabs>
-
 
 ## Background Color
 
@@ -65,7 +64,6 @@ Add some element in html.
   <div class="box-[box-size] bg-[primary] m-0.8em"></div>
   <div class="box-[box-size] bg-[gradient-back] m-0.8em"></div>
 </section>
-
 ```
 
 :::info[What is box?]
@@ -73,7 +71,6 @@ Add some element in html.
 `box-` type is TenoxUI's type that can change `width` and `height` at the same time.
 
 :::
-
 
 </TabItem>
 
@@ -86,7 +83,6 @@ Add some css variable that can be called in html.
   --box-size: 50px;
   --gradient-back: linear-gradient(to right, red, blue);
 }
-
 ```
 
 :::tip[using background-image]
@@ -96,6 +92,7 @@ You can also define image for the background or `background-image` and call it u
 ```html title="index.html"
 <div class="bg-[back] m-0.8em"></div>
 ```
+
 ```css title="style.css"
 :root {
   --back: url("image.png");
@@ -119,7 +116,6 @@ All color that available in css is valid on TenoxUI. Like, red, blue, yellow, li
 <div class="bg-red">
   <h1 class="tc-blue">Some Text</h1>
 </div>
-
 ```
 
 Color name will always be string.
@@ -136,17 +132,16 @@ HEX color is also valid in TenoxUI. You domt need to add `#` to define it.
 <div class="bg-f00">
   <h1 class="tc-0d0d0d">Some Text</h1>
 </div>
-
 ```
 
 ### 3. RGB & RGBA
 
 You can use RGB & RGBA color in your element with `{type}-rgb()` or `{type}-rgba()`. Here's some example
+
 ```html title="index.html"
 <div class="bg-rgb(255,0,255)">
   <h1 class="tc-rgb(255,255,255,0.6)">Some Text</h1>
 </div>
-
 ```
 
 :::info[More color usage]
@@ -175,7 +170,6 @@ You can also define color from css variable by using `{type}-[cssVarName]`
 <div class="bg-[back]">
   <h1 class="tc-[primary-200]">Cool Title!</h1>
 </div>
-
 ```
 
 ```css title="style.css"
@@ -184,9 +178,7 @@ You can also define color from css variable by using `{type}-[cssVarName]`
   --back: #0d0d0d;
   /* Other Variable */
 }
-
 ```
-
 
 :::tip
 

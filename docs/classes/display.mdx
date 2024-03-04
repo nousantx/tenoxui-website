@@ -7,6 +7,7 @@ How to define and use display property using TenoxUI.
 Changing `display` property value, you can use `display-{value}` or `dis-{value}` type to change the display value.
 
 ## Basic Usage
+
 ```html title="html"
 <div class="display-flex">Home</div>
 ```
@@ -14,9 +15,11 @@ Changing `display` property value, you can use `display-{value}` or `dis-{value}
 :::warning[I can't use inline-block?]
 
 I recommend you to store the value on css variable first, because 2-words value is not supported. Learn more about [2-words value](/docs/extras/all-value#1-two-word-value).
+
 ```html title="html"
 <div class="display-[ib]">...</div>
 ```
+
 ```css title="css"
 :root {
   --row-rev: row-reverse;
@@ -24,4 +27,5 @@ I recommend you to store the value on css variable first, because 2-words value 
   --ib: inline-block;
 }
 ```
+
 :::

@@ -6,7 +6,8 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 # Flexbox 📦
-## Intro 
+
+## Intro
 
 Flexbox is a one-dimensional layout system that we can use to create a row or a column axis layout. It makes our life easier to design and build responsive web pages without having to use tricky hacks and a lot of float and position properties in our CSS code.
 
@@ -25,7 +26,6 @@ Use `display-{value}` to change the display property.
 ```
 
 :::
-
 
 ## Flex Wrap
 
@@ -47,26 +47,27 @@ Adding some few html element with flex wrapper.
   <div class="my-class">...</div>
 </div>
 ```
+
 </TabItem>
 <TabItem value="javascript">
 
 Just make new class using `moreStyles` function.
 
 ```js title="script.js"
-import { makeStyles } from 'tenoxui'
+import { makeStyles } from "tenoxui";
 
 let myStyles = {
   ".flex": "display-flex",
   ".flex-wrap": "fx-wrap-wrap",
   ".my-class": "auto-flex-200px bg-[primary] p-1rem",
   // Other Class
-}
+};
 
 makeStyles(myStyles);
 ```
+
 </TabItem>
 </Tabs>
-
 
 ## Flex Property
 
@@ -74,7 +75,7 @@ The flex property sets the flexible length on flexible items. You can use `fx-`,
 
 - `fx` or `flex` : `flex: {value};`
 
--  `fx-auto` or `auto-flex` : `flex: 1 1 {value};`
+- `fx-auto` or `auto-flex` : `flex: 1 1 {value};`
 
 - `fx-grow` : `flex-grow: {value};`
 
@@ -85,7 +86,6 @@ The flex property sets the flexible length on flexible items. You can use `fx-`,
 - `fx-wrap` : `flex-wrap: {value};`
 
 ### Digging More
-
 
 <Tabs>
 <TabItem value="html">
@@ -99,26 +99,27 @@ Adding some few html element with flex wrapper.
   <div class="my-flex bg-red">...</div>
 </div>
 ```
+
 </TabItem>
 <TabItem value="javascript">
 
 Just make new class using `moreStyles` function.
 
 ```js title="script.js"
-import { makeStyles } from 'tenoxui'
+import { makeStyles } from "tenoxui";
 
 let myStyles = {
   ".flex": "display-flex",
   ".flex-wrap": "fx-wrap-wrap",
   ".my-flex": "fx-shrink-1 flex-grow-1 flex-basis-200px",
   // Other Class
-}
+};
 
 makeStyles(myStyles);
 ```
+
 </TabItem>
 </Tabs>
-
 
 ## Flex Direction
 
@@ -135,6 +136,7 @@ I recommend you to store the value on css variable first, because 2-words value 
 ```html title="html"
 <div class="fd-[col-rev]">...</div>
 ```
+
 ```css title="css"
 :root {
   --row-rev: row-reverse;
@@ -143,4 +145,3 @@ I recommend you to store the value on css variable first, because 2-words value 
 ```
 
 :::
-
