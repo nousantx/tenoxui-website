@@ -17,9 +17,9 @@
     "docs-id": "cp -r docs/** i18n/id/docusaurus-plugin-content-docs/current"
   },
   "dependencies": {
-    "@docusaurus/core": "3.1.0",
-    "@docusaurus/plugin-sitemap": "^3.1.0",
-    "@docusaurus/preset-classic": "3.1.0",
+    "@docusaurus/core": "^3.1.1",
+    "@docusaurus/plugin-sitemap": "^3.1.1",
+    "@docusaurus/preset-classic": "^3.1.1",
     "@mdx-js/react": "^3.0.0",
     "@tenoxui/react": "^1.0.1",
     "clsx": "^2.0.0",
@@ -29,8 +29,8 @@
     "tenoxui": "0.4.24"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.1.0",
-    "@docusaurus/types": "3.1.0"
+    "@docusaurus/module-type-aliases": "^3.1.1",
+    "@docusaurus/types": "^3.1.1"
   },
   "browserslist": {
     "production": [
