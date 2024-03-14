@@ -37,7 +37,7 @@ const config = {
         htmlLang: "en-GB",
         label: "English",
       },
-      id: { htmlLang: "id-ID", label: "Indonesia" },
+      id: { htmlLang: "id-ID", label: "Bahasa Indonesia" },
     },
   },
 
