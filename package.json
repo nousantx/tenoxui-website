@@ -26,7 +26,7 @@
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "tenoxui": "0.4.24"
+    "tenoxui": "0.5.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.1.1",
