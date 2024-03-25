@@ -7,46 +7,80 @@ import TabItem from "@theme/TabItem";
 
 # makeStyles function
 
-Now, we will take a look to `makeStyles` function. It will retreive one parameter which is a object. You can define the styles you want inside of it.
+Now, we will take a look at `makeStyles` function. It will retreive one parameter which is a object. You can define the styles you want inside of it.
 
 ## Usage
 
-<Tabs>
-  <TabItem value="html" label="HTML">
-    <p>Add some html element:</p>
-
-    ```html
-    <div class="new-class"></div>
-    <div id="new-id"></div>
-    <div class="some-box"> 
-      <h1>Hello</h1>
-    </div>
-    ```
-
-    <p>You can add more element if you want</p>
-  </TabItem>
-
-  <TabItem value="js" label="JS">
-<p>You can apply style for elements you want :</p>
 ```js
 makeStyles({
-
-    ".new-class": "box-100px bg-red br-8px p-1rem",
-
-    "#new-id": "box-50px bg-blue",
-
-    ".some-box": "display-flex flex-parent-center",
-
-    ".some-box > h1": "fs-3rem fw-500 tc-[primary-500]",
-
+  selector: styles,
 });
 ```
 
-:::tip
+- `selector`: Selector which be styled.
+- `style` : The style will given to the selector.
 
-Don't forget to add your selector, you can use class, id, attribute, and others selector on first parameter.
+### Usage Example
 
-:::
+Define the styles using `makeStyles` :
 
-      </TabItem>
-    </Tabs>
+```js title="Javascript"
+makeStyles({
+  // selector: styles
+  body: "bg-black tc-white p-10vw h-mn-100vh",
+  section: "mt-20px",
+  "nav > li": "fs-18px fw-500",
+  // Re-usable classes
+  ".center": "display-flex flex-parent-center",
+  ".my-box": "box-100px bg-lightblue",
+  ".my-text": "fs-1rem fw-600 tc-brown",
+});
+```
+
+Calling the styles inside html element :
+
+```HTML title="HTML"
+<div class="my-box center">
+  <h1 class="my-text">Hello</h1>
+</div>
+```
+
+### Nested styles example
+
+`makeStyles` function also support nested styling, because this is using an object, try this out :
+
+```js title="Javascript"
+makeStyles({
+  body: "mt-20px",
+  ".container": "display-flex flex-parent-center gap-1rem",
+  // Your nested style
+  ".card": {
+    "": "p-20px br-8px",
+    ".title": "fs-1.4rem fw-600",
+    ".desc": "fs-14px fw-500 lh-1.4 ta-justify",
+  },
+});
+```
+
+Note: Empty string will apply the style for the parent selector. In this case, it will apply style for `.card` class.
+
+HTML code :
+
+```html title="HTML"
+<!-- This title class won't styled -->
+<h1 class="title">Not Styled Title!!</h1>
+
+<!-- Only component inside `.card` class will have the style -->
+<div class="container">
+  <div class="card">
+    <h2 class="title">Hello</h2>
+    <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+  </div>
+  <div class="card">
+    <h2 class="title">World</h2>
+    <p class="desc">Lorem ipsum dolor sit amet consectetur.</p>
+  </div>
+</div>
+```
+
+### Darkmode Toggler Example
