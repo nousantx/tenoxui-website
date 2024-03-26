@@ -55,6 +55,7 @@ makeStyles({
   ".container": "display-flex flex-parent-center gap-1rem",
   // Your nested style
   ".card": {
+    // Empty string will give the style for its parent
     "": "p-20px br-8px",
     ".title": "fs-1.4rem fw-600",
     ".desc": "fs-14px fw-500 lh-1.4 ta-justify",
@@ -62,15 +63,13 @@ makeStyles({
 });
 ```
 
-Note: Empty string will apply the style for the parent selector. In this case, it will apply style for `.card` class.
-
 HTML code :
 
 ```html title="HTML"
-<!-- This title class won't styled -->
+<!-- this title class won't styled -->
 <h1 class="title">Not Styled Title!!</h1>
 
-<!-- Only component inside `.card` class will have the style -->
+<!-- only component inside `.card` class will have the style -->
 <div class="container">
   <div class="card">
     <h2 class="title">Hello</h2>
@@ -84,3 +83,62 @@ HTML code :
 ```
 
 ### Darkmode Toggler Example
+
+Let's make a simple dark mode toggler using `makeStyles`.
+
+Make a html file and add a trigger for darkmode and make sure you already included `tenoxui` to your project :
+
+```html title="index.html"
+<!-- default style for body -->
+<body class="bg-white tc-black">
+  <button onClick="darkModeToggler()">Click Me!</button>
+  <!-- script -->
+  <script src="./index.js"></script>
+</body>
+```
+
+Now make new file called `index.js` and write some code :
+
+```js title="index.js"
+let darkMode = false;
+
+const darkModeToggler = () => {
+  // change the value of darkMode
+  darkMode = !darkMode;
+
+  // defining state between lightmode and darkmode
+  const styles = {
+    light: {
+      body: "bg-white tc-black",
+      ".card": "bg-blue tc-white",
+      // others selectors and styles
+    },
+    dark: {
+      body: "bg-black tc-white",
+    },
+  };
+
+  // make conditional for darkMode state
+  const stateNow = darkMode ? styles.dark : styles.light;
+
+  // finally, apply the styles according the state using `makeStyles`
+  makeStyles(stateNow);
+};
+```
+
+If you want to apply style for only one selector, you can use `makeStyle` instead :
+
+```js
+let darkMode = false;
+
+function darkModeToggler() {
+  // change `darkMode` value when clicked
+  darkMode = !darkMode;
+
+  // storing state
+  const stateNow = darkMode ? "bg-white tc-black" : "bg-black tc-white";
+
+  // style will applied for body tag only
+  makeStyle("body", stateNow);
+}
+```
