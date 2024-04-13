@@ -19,10 +19,10 @@ function HomepageHeader() {
           <i className="txi ti-vtx_part_1 fs-10rem absolute"></i>
           <i className="txi ti-vtx_part_2 fs-10rem tc-[ifm-color-primary] absolute"></i>
         </div>
-        <h1 className="hero__title">
-          TenoxUI Docs
-        </h1>
-        <p className="hero__subtitle">A CSS Framework with nearly 0 CSS file.</p>
+        <h1 className="hero__title">TenoxUI Docs</h1>
+        <p className="hero__subtitle">
+          A CSS Framework with nearly 0 CSS file.
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -40,10 +40,7 @@ export default function Home() {
   Styler();
   const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title="TenoxUI Docs"
-      description="Welcome to TenoxUI Documentation Page"
-    >
+    <Layout title="Home" description="Welcome to TenoxUI Documentation Page">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
