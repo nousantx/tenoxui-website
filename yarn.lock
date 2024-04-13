@@ -1485,7 +1485,7 @@
     "@docusaurus/theme-search-algolia" "3.1.1"
     "@docusaurus/types" "3.1.1"
 
-"@docusaurus/react-loadable@5.5.2", "react-loadable@npm:@docusaurus/react-loadable@5.5.2":
+"@docusaurus/react-loadable@5.5.2":
   version "5.5.2"
   resolved "https://registry.yarnpkg.com/@docusaurus/react-loadable/-/react-loadable-5.5.2.tgz#81aae0db81ecafbdaee3651f12804580868fa6ce"
   integrity sha512-A3dYjdBGuy0IGT+wyLIGIKLRE+sAk1iNk0f1HjNDysO7u8lhL4N3VEm+FAubmJbAztn94F7MxBTPmnixbiyFdQ==
@@ -1953,10 +1953,12 @@
   dependencies:
     defer-to-connect "^2.0.1"
 
-"@tenoxui/react@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@tenoxui/react/-/react-1.0.1.tgz#46eab52d51bf3314d5876a40684c658032030728"
-  integrity sha512-sTAzDpzTszkKh+EJXBTIxlYmOs0DMIFEIHv39asZASn0vtRa/VF84NSDFtBs3IYNiJKgNj5fYM4BrMQbNVu1jQ==
+"@tenoxui/react@^0.7.1":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@tenoxui/react/-/react-0.7.0.tgz#53f01861df5d97b9ac0d86e135b07537838c53c9"
+  integrity sha512-hj2wnFmGOvoJRe21cBLrYt854PWJPjP/8zIWvqEhr9mLOxjzJdAAU9po/46f5PYO/UexDBs7fAta+WscpcYZtA==
+  dependencies:
+    tenoxui "0.7"
 
 "@trysound/sax@0.2.0":
   version "0.2.0"
@@ -6906,6 +6908,14 @@ react-loadable-ssr-addon-v5-slorber@^1.0.1:
   dependencies:
     "@babel/runtime" "^7.10.3"
 
+"react-loadable@npm:@docusaurus/react-loadable@5.5.2":
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/@docusaurus/react-loadable/-/react-loadable-5.5.2.tgz#81aae0db81ecafbdaee3651f12804580868fa6ce"
+  integrity sha512-A3dYjdBGuy0IGT+wyLIGIKLRE+sAk1iNk0f1HjNDysO7u8lhL4N3VEm+FAubmJbAztn94F7MxBTPmnixbiyFdQ==
+  dependencies:
+    "@types/react" "*"
+    prop-types "^15.6.2"
+
 react-router-config@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/react-router-config/-/react-router-config-5.1.1.tgz#0f4263d1a80c6b2dc7b9c1902c9526478194a988"
@@ -7773,6 +7783,11 @@ tenoxui@0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/tenoxui/-/tenoxui-0.5.1.tgz#399388f6e7345ccc1e29e06bf993fca72f1bd00b"
   integrity sha512-HpVIgd6DsIJp9S+UXEtY8whbZs/BTxDSp77tJgClYp3i933wy6oZi4nonuA3I6BEMM5sfKN2FWWFxWNfR9kemw==
+
+tenoxui@0.7:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/tenoxui/-/tenoxui-0.7.1.tgz#da819c26348d9b2bb2ae340e064e71925d48c7f0"
+  integrity sha512-svMRHChBIC3YviPbruraZTugjVpigHBa5MKhIpemWmLUADWsaqNx+8aTyLh/QxLqfKYSp9yf64Q8q2bqTmKqkg==
 
 terser-webpack-plugin@^5.3.7, terser-webpack-plugin@^5.3.9:
   version "5.3.10"

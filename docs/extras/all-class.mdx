@@ -38,6 +38,7 @@ Explore All Class and Property that you can use or already defined by TenoxUI.
 - `bg-loc-x` : `background-position-x`
 - `bg-loc-y` : `background-position-y`
 - `bg-blend` : `background-blend`
+- `bg-image` : `background-image`
 
 ## Border 🛡️
 
@@ -59,12 +60,6 @@ Explore All Class and Property that you can use or already defined by TenoxUI.
 - `radius-bottom` : [ `br-bl`, `br-br` ],
 - `radius-left` : [ `br-tl`, `br-bl` ],
 - `radius-right` : [ `br-tr`, `br-br` ],
-- `br-ss` : `border-start-start-radius`
-- `br-se` : `border-start-end-radius`
-- `br-ee` : `border-end-end-radius`
-- `br-es` : `border-end-start-radius`
-- `bw-is` : `border-inline-start-width`
-- `bw-ie` : `border-inline-end-width`
 
 ## box-sizing 🖥️
 
@@ -120,15 +115,8 @@ Explore All Class and Property that you can use or already defined by TenoxUI.
 - `ti` : `textIndent`
 - `tn` : `textReansform`
 - `ws` : `wordSpacing`
-- `family` : `fontFamily`
 - `text-style` : `fontStyle`
 - `white-space` : `whiteSpace`
-- `text-over` : `textOverflow`
-- `text-wrap` : `textWrap`
-- `v-align` : `verticalAlign`
-- `w-break` : `wordBreak`
-- `wrap-over` : `overflowWrap`
-- `hyphens` : `hyphens`
 
 ## Height 📏
 
@@ -238,7 +226,7 @@ Overflow property :
 
 ## Custom Type and Property ✨
 
-You can make your own type and property by using [addType and defineProps](/docs/function/addtype-and-defineprops) function. Here's simple usage :
+You can make your own type and property by using [addType](/docs/function/addtype) or [defineProps](/docs/function/define-props). function. Here's simple usage :
 
 ```html title="html"
 <div class="my-box-type-300px"></div>
@@ -246,9 +234,9 @@ You can make your own type and property by using [addType and defineProps](/docs
 ```
 ```js title="javascript"
 defineProps({
-  boxs: ["-webkit-box-sizing"],
+  boxs: "-webkit-box-sizing",
   "my-box-type": ["width", "height"],
-  "my-bg-type": ["background-color"]
+  "my-bg-type": "backgroundColor"
 })
 ```
 

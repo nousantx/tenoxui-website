@@ -25,7 +25,7 @@ new makeTenoxUI(element);
 
 Let's make a simple example for using this instance :
 
-```js title="index.js"
+```js
 // defining element you want to use
 const element = document.querySelector(selector);
 
@@ -34,6 +34,21 @@ const styler = new makeTenoxUI(element);
 
 // applying method
 styler.methodExample();
+```
+Using `querySelectorAll`:
+
+```js
+// Defining selector
+const selectors = document.querySelectorAll(".my-box");
+
+// iterate the selector
+selectors.forEach(sel => {
+  // instance
+  const styler = new makeTenoxUI(sel);
+
+  // finally, apply the style
+  styler.methodExample();
+});
 ```
 
 In next page, you will learn about methods you can use using `makeTenoxUI` instance.

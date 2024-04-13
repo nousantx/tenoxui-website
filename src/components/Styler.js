@@ -2,11 +2,11 @@
  * Using TenoxUI v0.4.24 ESM
  */
 
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import tenoxui, { addType, makeStyles } from "./tui.esm.js";
 
 const Styler = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     addType("fxw", ["flexWrap"]);
 
     makeStyles({

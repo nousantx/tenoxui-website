@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "nousantx", // Usually your GitHub org/user name.
-  projectName: "tenoxui", // Usually your repo name.
+  projectName: "tenoxui-website", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -29,17 +29,6 @@ const config = {
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "id"],
-    localeConfigs: {
-      en: {
-        htmlLang: "en-GB",
-        label: "English",
-      },
-      id: { htmlLang: "id-ID", label: "Bahasa Indonesia" },
-    },
-  },
 
   presets: [
     [
@@ -94,10 +83,6 @@ editUrl: "https://github.com/nousantx/tenoxui-website/tree/main/"
             label: "Docs",
           },
           { to: "/blog", label: "Blog", position: "right" },
-          {
-            type: "localeDropdown",
-            position: "left",
-          },
           {
             href: "https://github.com/nousantx/tenoxui",
             label: "GitHub",

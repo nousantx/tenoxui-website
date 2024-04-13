@@ -59,11 +59,11 @@ npm i @tenoxui/react
 edit `src/App.jsx`
 
 ```jsx title="App.jsx"
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import tenoxui from "@tenoxui/react";
 
 const App = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     tenoxui();
   }, []);
   return <h1 className="fs-1rem fw-500">Hello World</h1>;
@@ -75,7 +75,7 @@ export default App;
 
 :::info
 
-using `useEffect` to apply the style to elements real time.
+using `useLayoutEffect` to apply the style to elements real time.
 
 :::
 
@@ -120,7 +120,7 @@ export default App;
 
 :::tip
 
-Now, you dont need to add `useEffect` to every component, just make it one and store your style there, so you can call it on every components you want.
+Now, you dont need to add `useLayoutEffect` to every component, just make it one and store your style there, so you can call it on every components you want.
 
 :::
 
@@ -131,11 +131,11 @@ Now, you dont need to add `useEffect` to every component, just make it one and s
 Make new file called `Styler.jsx` to store your type, property, and styles. Also, you can import it to others components as well.
 
 ```jsx title="Styler.jsx"
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import tenoxui, { defineProps, makeStyles } from "@tenoxui/react";
 
 const Styler = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
 
     // Your custom type and property
     let MyProps = {
