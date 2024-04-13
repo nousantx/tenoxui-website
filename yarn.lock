@@ -1953,7 +1953,7 @@
   dependencies:
     defer-to-connect "^2.0.1"
 
-"@tenoxui/react@^0.7.1":
+"@tenoxui/react@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@tenoxui/react/-/react-0.7.0.tgz#53f01861df5d97b9ac0d86e135b07537838c53c9"
   integrity sha512-hj2wnFmGOvoJRe21cBLrYt854PWJPjP/8zIWvqEhr9mLOxjzJdAAU9po/46f5PYO/UexDBs7fAta+WscpcYZtA==
