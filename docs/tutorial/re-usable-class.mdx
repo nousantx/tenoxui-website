@@ -1,0 +1,47 @@
+---
+title: Re-Usable Class Name
+---
+
+# Re Usable Class
+
+Adding re-usable className using [makeStyles](/docs/function/make-styles) function to avoid repeating style as much as possible.
+
+## Tutorial
+
+First, you need to add `makeStyles` function to your project :
+
+```js
+import { makeStyles } from "tenoxui";
+```
+
+Then, wrap the function inside `useEffect` or `useLayoutEffect` hooks to the styles applied faster and realtime after the className is changed.
+
+```js title='App.jsx'
+import { useLayoutEffect } from "react";
+import { makeStyles } from "tenoxui";
+
+export default function App() {
+  useLayoutEffect(() => {
+    makeStyles({
+      // Reusable className
+      ".center": "display-flex flex-parent-center",
+      ".text-sm": "fs-12px fw-400",
+      ".text-lg": "fs-24px fw-700",
+      ".text-center": "ta-center lh-1.3",
+      // styles for elements
+      "h1.title": "fs-2.3rem",
+    });
+  }, []);
+
+  return (
+    <div className="center">
+      <header className="text-center">
+        <h1 className="text-lg">Hello World</h1>
+        <p className="text-sm">Lorem Ipsum!</p>
+      </header>
+    </div>
+  );
+}
+```
+
+We doesn't define any classes or styles, you can define your own style and not stick to defined classNames, create your own styles.
