@@ -4,9 +4,25 @@ title: Color Class
 
 # Color Class
 
-It's a bit hard to use color from `css variable`'s value. So, i recommend you to make a palette with light to dark color like this :
+This is just a simple tutorial to make a bunch of className using `makeStyles` function to generate classNames for color and background from `css variable`'s value.
 
-```css title="root.css"
+## Let's Start!
+
+You can use this project tree example :
+
+```txt title="Project Tree"
+root
+├── src
+│   ├── App.jsx
+│   ├── Color.js
+│   ├── index.css
+│   └── main.jsx
+├── package.json
+└── // other
+```
+First, you need to define each color you need inside your CSS file, and domt forget to add it to `main.jsx` file :
+
+```css title="index.css"
 :root {
   /* Primary: Gǎn Lǎn Huáng Olive */
   --primary-100: #f9fff2;
@@ -34,23 +50,51 @@ It's a bit hard to use color from `css variable`'s value. So, i recommend you to
 
 After that, you can make a function to generate color classNames and then use `makeStyles` function to generate the usable classNames :
 
-```js
-// store the output color
-let color = {};
+```js title="Color.js"
+import { makeStyles } from "tenoxui";
 
-function Color(categories) {
+export default function Color(categories) {
+  // store the color object
+  const color = {};
+
   categories.forEach((category) => {
     for (let i = 100; i <= 900; i += 100) {
-      // this is the className that you can use as the output
-      const outputText = `.text-${category}-${i}`;
-      // using `tc-` type to change the color value
-      const textColorValue = `tc-[${category}-${i}]`;
-      color[outputText] = textColorValue;
-      // button background color generation
-      const bgClassName = `.bg-${category}-${i}`;
-      const bgColorValue = `back-c-[${category}-${i}]`;
-      color[bgClassName] = bgColorValue;
+      // suffix shorthand
+      const clsSuffix = `-${category}-${i}`;
+      const valSuffix = `-[${category}-${i}]`;
+
+      // add more class and style needed
+      color[`.text${clsSuffix}`] = `tc${valSuffix}`;
+      color[`.bg${clsSuffix}`] = `bg${valSuffix}`;
     }
   });
+
+  // now, just apply the color
+  makeStyles(color);
 }
+```
+
+And finally, you can call the function inside your `App.jsx` file :
+
+```jsx title="App.jsx"
+import { useLayoutEffect } from "react";
+import tenoxui from "tenoxui";
+import Color from "./Color.js";
+
+const App = () => {
+  useLayoutEffect(() => {
+    // add more color needed
+    Color(["primary", "accent"]);
+    // tenoxui init
+    tenoxui();
+  }, []);
+
+  return (
+    <div className="box-100px bg-accent-800 p-2rem br-0.125rem">
+      <h1 className="text-primary-500">Hello</h1>
+    </div>
+  );
+};
+
+export default App;
 ```
