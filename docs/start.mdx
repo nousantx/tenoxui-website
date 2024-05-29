@@ -8,7 +8,7 @@ import TabItem from "@theme/TabItem";
 
 # Welcome!
 
-Wellcome to TenoxUI documentation page. In this page you will learn about how to use TenoxUI CSS Framework and also learn about all function in TenoxUI.
+Wellcome to TenoxUI documentation page. In this page you will learn about how to use TenoxUI CSS Framework.
 
 ## About
 
@@ -29,7 +29,7 @@ npm i tenoxui@latest --save-dev
 ### CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tenoxui@latest/dist/js/tenoxui.min.js"></script>
 ```
 
 ## React Environment
@@ -50,120 +50,8 @@ npm i @tenoxui/react --save-dev
 
 ### Configuration
 
-edit `src/App.jsx`
-
-```jsx title="App.jsx"
-import { useLayoutEffect } from "react";
-import tenoxui from "@tenoxui/react";
-
-const App = () => {
-  useLayoutEffect(() => {
-    tenoxui();
-  }, []);
-  return <h1 className="fs-1rem fw-500">Hello World</h1>;
-};
-
-export default App;
-```
-
-:::info
-
-using `useEffect` or `useLayoutEffect` hooks to apply the style to the elements, because tenoxui using DOM to handle the styling process.
-
-:::
-
-### React Usage Example
-
-In this section, you will see more efficient way to styling your elements using TenoxUI in React JS.
-
-<Tabs>
-
-<TabItem value="app" label="App.jsx">
-
-First, you need to edit a few line of code in `src/App.jsx`
-
-```jsx title="App.jsx"
-// Other Components
-import Navbar from "./component/Navbar";
-import Footer from "./component/Footer";
-// Import Styler
-import Styler from "./Styler";
-
-const App = () => {
-
-  Styler();
-
-  return (
-    <>
-      <Navbar />
-      <main>
-        <header>
-          <h1 className="title"></h1>
-          <p>Lorem ipsum dolor sit amet, consectetur.</p>
-        </header>
-      </main>
-      <Footer />
-    </>
-  );
-};
-
-export default App;
-```
-
-:::tip
-
-Now, you dont need to add `useLayoutEffect` to every component, just make it one and store your style there, so you can call it on every components you want.
-
-:::
-
-</TabItem>
-
-<TabItem value="styler" label="Styler.jsx">
-
-Make new file called `Styler.jsx` to store your type, property, and styles. Also, you can import it to others components as well.
-
-```jsx title="Styler.jsx"
-import { useLayoutEffect } from "react";
-import tenoxui, { defineProps, makeStyles } from "@tenoxui/react";
-
-const Styler = () => {
-  useLayoutEffect(() => {
-
-    // Your custom type and property
-    let MyProps = {
-      scroll: ["scrollBehavior"],
-      haha: ["padding", "margin"],
-    };
-
-    // Define your style here
-    let myStyles = {
-      // Add smooth scrolling
-      html: "scroll-smooth",
-      // Other style
-      body: "bg-[background] m-0",
-      main: "w-100% h-mn-100svh display-flex flex-parent-center p-2rem",
-      "h1.title": "fs-2.5rem fw-bold lh-2",
-    };
-
-    // Apply the style
-    defineProps(MyProps);
-    makeStyles(MyStyles);
-
-    tenoxui();
-  }, []);
-};
-
-export default Styler;
-
-```
-
-Now, the styler already defined, you can store your styles and propertty here. So, you can easily import your style again.
-
-</TabItem>
-
-</Tabs>
-
+There's no specific way to configure tenoxui CSS, just include the `tenoxui` function, add some types and properties, and tenoxui is ready to use. If you need the boilerplate, see [HTML Template](/docs/core/how-it-works#html-template) or [React Template](/docs/core/how-it-works#react-js-template).
 
 ## Closing
 
-Now, you can start exploring the type and property. Let's Gooo!!
+Now, you can start exploring the type# and properties. Let's Gooo!!
