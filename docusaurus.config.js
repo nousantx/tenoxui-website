@@ -27,27 +27,25 @@ const config = {
           changefreq: "weekly",
           priority: 0.5,
           ignorePatterns: ["/tags/**"],
-          filename: "sitemap.xml",
+          filename: "sitemap.xml"
         },
         docs: {
           sidebarPath: "./sidebars.js",
-          editUrl: "https://github.com/nousantx/tenoxui-website/tree/main/",
+          editUrl: "https://github.com/nousantx/tenoxui-website/tree/main/"
         },
         blog: {
           showReadingTime: true,
           readingTime: ({ content, frontMatter, defaultReadingTime }) =>
-            frontMatter.hide_reading_time
-              ? undefined
-              : defaultReadingTime({ content }),
+            frontMatter.hide_reading_time ? undefined : defaultReadingTime({ content }),
           blogTitle: "TenoxUI blog!",
           blogDescription: "TenoxUI Blogs!",
-          blogSidebarTitle: "All posts",
+          blogSidebarTitle: "All posts"
         },
         theme: {
-          customCss: "./src/css/custom.css",
-        },
-      }),
-    ],
+          customCss: "./src/css/custom.css"
+        }
+      })
+    ]
   ],
 
   themeConfig:
@@ -59,37 +57,37 @@ const config = {
         title: "TenoxUI",
         logo: {
           alt: "TenoxUI Logo",
-          src: "img/tenoxui.svg",
+          src: "img/tenoxui.svg"
         },
         items: [
           {
             type: "docSidebar",
             sidebarId: "tutorialSidebar",
             position: "right",
-            label: "Docs",
+            label: "Docs"
           },
           { to: "/blog", label: "Blog", position: "right" },
           {
             href: "https://github.com/nousantx/tenoxui",
             label: "GitHub",
-            position: "right",
+            position: "right"
           },
           {
             href: "https://www.jsdelivr.com/package/npm/tenoxui",
             label: "JSDelivr",
-            position: "right",
-          },
-        ],
+            position: "right"
+          }
+        ]
       },
       colorMode: {
         defaultMode: "dark",
         disableSwitch: false,
-        respectPrefersColorScheme: false,
+        respectPrefersColorScheme: false
       },
       docs: {
         sidebar: {
-          hideable: true,
-        },
+          hideable: true
+        }
       },
       footer: {
         style: "light",
@@ -99,81 +97,77 @@ const config = {
             items: [
               {
                 label: "Type and Property",
-                to: "/docs/category/classes",
+                to: "/docs/category/classes"
               },
               {
                 label: "Function",
-                to: "/docs/category/function",
-              },
-              {
-                label: "Extras",
-                to: "/docs/category/extras",
-              },
-            ],
+                to: "/docs/category/function"
+              }
+            ]
           },
           {
             title: "Projects",
             items: [
               {
                 label: "TUI Components",
-                href: "https://twitter.com/nousantx/tenoxui-component",
+                href: "https://twitter.com/nousantx/tenoxui-component"
               },
               {
                 label: "tnk7css",
-                href: "https://twitter.com/nousantx/tnk7css",
+                href: "https://twitter.com/nousantx/tnk7css"
               },
               {
                 label: "React Lab",
-                href: "https://github.com/nousantx/react-tui",
+                href: "https://github.com/nousantx/react-tui"
               },
               {
                 label: "TenoxUI Website",
-                href: "https://github.com/nousantx/tenoxui-website",
-              },
-            ],
+                href: "https://github.com/nousantx/tenoxui-website"
+              }
+            ]
           },
           {
             title: "Project Links",
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/nousantx/tenoxui",
+                href: "https://github.com/nousantx/tenoxui"
               },
               {
                 label: "NPM",
-                href: "https://www.npmjs.com/package/tenoxui",
+                href: "https://www.npmjs.com/package/tenoxui"
               },
               {
                 label: "JSDelivr",
-                href: "https://www.jsdelivr.com/package/npm/tenoxui",
-              },
-            ],
+                href: "https://www.jsdelivr.com/package/npm/tenoxui"
+              }
+            ]
           },
           {
             title: "About me",
             items: [
               {
                 label: "GitHub",
-                href: "https://github.com/nousantx",
+                href: "https://github.com/nousantx"
               },
               {
                 label: "Instagram",
-                href: "https://instagram.com/nousantx",
+                href: "https://instagram.com/nousantx"
               },
               {
                 label: "Twitter",
-                href: "https://x.com/nousantx",
-              },
-            ],
-          },
+                href: "https://x.com/nousantx"
+              }
+            ]
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} NOuSantx. Built with Docusaurus`,
+        copyright: `Copyright © ${new Date().getFullYear()} NOuSantx. Built with Docusaurus`
       },
       prism: {
         theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
-      },
-    }),
+        darkTheme: prismThemes.dracula
+      }
+    })
 };
 
 export default config;
