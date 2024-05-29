@@ -1,6 +1,3 @@
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 # Background 🌆
 
 Adding background through you element.
@@ -9,12 +6,20 @@ Adding background through you element.
 
 You can set `background` property by use `bg-` type, and it can recognize all background value. Such as, color, css variable, and also using image. Available properties :
 
-- `bg` : `background`
-- `bg-size` : `background-size`
-- `bg-clip` : `background-clip`
-- `bg-repeat` : `background-repeat`
-- `bg-loc` : `background-position`
-- `bg-loc-x` : `background-position-x`
-- `bg-loc-y` : `background-position-y`
-- `bg-blend` : `background-blend`
-- More still maintained.
+- `bg`: `background`
+- `bg-color`: `background-color`
+- `bg-image`: `background-image`
+- `bg-attach`: `background-attachment`
+- `bg-origin`: `background-origin`
+- `bg-size`: `background-size`
+- `bg-clip`: `background-clip`
+- `bg-repeat`: `background-repeat`
+- `bg-loc`: `background-position`
+
+## Usage
+
+Here's simple usage of background properties :
+
+```html
+<div class="box-100px bg-image-[url(...)] bg-size-cover bg-loc-center"></div>
+```

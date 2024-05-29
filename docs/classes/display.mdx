@@ -4,28 +4,20 @@ How to define and use display property using TenoxUI.
 
 ## Type
 
-Changing `display` property value, you can use `display-{value}` or `dis-{value}` type to change the display value.
+Changing `display` property value, you can use `d-{value}` type.
 
-## Basic Usage
+## Usage
 
 ```html title="html"
-<div class="display-flex">Home</div>
+<div class="d-flex flex-parent-center">...</div>
 ```
 
 :::warning[I can't use inline-block?]
 
-I recommend you to store the value on css variable first, because 2-words value is not supported. Learn more about [2-words value](/docs/extras/all-value#1-two-word-value).
+You can, but wrap the value inside square bracket `[]` like this :
 
-```html title="html"
-<div class="display-[ib]">...</div>
-```
-
-```css title="css"
-:root {
-  --row-rev: row-reverse;
-  --col-rev: column-reverse;
-  --ib: inline-block;
-}
+```html
+<div class="d-[inline-block]">...</div>
 ```
 
 :::

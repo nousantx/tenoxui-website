@@ -5,38 +5,14 @@ import TabItem from "@theme/TabItem";
 
 Despite its not ocassionally used, but gotchu.
 
-## Type Rules
+## Types
 
-**`over-`** : Set `overflow` property.
+- `over`: Set `overflow` property
+- `over-x`: Set `overflowX` property
+- `over-y`: Set `overflowY` property.
 
-**`overX-`** : Set `overflowX` property.
+## Usage Example
 
-**`overY-`** : Set `overflowY` property.
-
-## Supported Value
-
-`hidden`, `auto`, `visible`, `scroll`, and `overlay`.
-
-:::info[Pro tip]
-
-Single-word values such as "hidden," "center," and others are functional and supported. If you intend to use two-word values like "space-between," "row-reverse," and others, I recommend wrapping them with CSS variables first and utilizing brackets for the call.
-
-<Tabs>
-<TabItem value="html" label="HTML">
 ```html
-<div class="flex ai-center jc-[sb] fd-column gap-1rem">
-  <h1 class="fs-1.5rem tc-[primary]">Hello</h1>
-</div>
+<div class="w-100px over-hidden">...</div>
 ```
-</TabItem>
-<TabItem value="css" label="CSS">
-```css
-:root {
-  --sb: space-between;
-  --primary: #d3e602;
-}
-```
-</TabItem>
-</Tabs>
-
-:::

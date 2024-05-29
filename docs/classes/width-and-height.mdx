@@ -1,45 +1,27 @@
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-
 # Width and Height 📐
 
-How to define width and height of element?
+## Types
 
-:::info[Rules]
+### Width
 
-## Type Rules
+- `w`: `width` property
+- `w-mn`: `min-width` property
+- `w-mx`: `max-width` property
 
-<Tabs>
-  <TabItem value="width" label="Width">
+### Height
 
-### Width Property
+- `h`: `height` property
+- `h-mn`: `min-height` property
+- `h-mx`: `max-height` property
 
-**`w-`** : Set `width` to the element.
+### Box
 
-**`w-mn-`** : Set `min-width` to the element.
+There's a type called `box`, and it will set for both `width` and `height` at the same time.
 
-**`w-mx-`** : Set `max-width` to the element.
+## Simple Usage
 
-</TabItem>
+```html
+<div class="w-100px h-200px">...</div>
+<div class="box-100px">...</div>
+```
 
-<TabItem value="height" label="Height">
-
-### Height Property
-
-**`h-`** : Set `height` to the element.
-
-**`h-mn-`** : Set `min-height` to the element.
-
-**`h-mx-`** : Set `max-height` to the element.
-
-</TabItem>
-
-</Tabs>
-
-:::
-
-:::tip
-
-You can also use `% (percent)` as the unit. Such as `w-100%` and so on.`
-
-:::
