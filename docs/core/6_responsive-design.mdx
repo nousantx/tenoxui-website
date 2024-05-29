@@ -1,0 +1,72 @@
+# Responsive Design
+
+TenoxUI support responsive design by adding the breakpoints prefix to the elements.
+
+## Default Breakpoints
+- sm: `640px`
+- md: `768px`
+- lg: `1024px`
+- xl: `1280px`
+
+## Usage
+
+Adding breakpoint prefix to the element :
+
+```html
+<div class="max-md:bg-red md:bg-blue lg:bg-green"></div>
+```
+
+## Important
+If you want to use responsive design using tenoxui, you must define your classes like this :
+```html
+<div class="bg-red max-md:bg-red md:bg-blue lg:bg-green"></div>
+```
+
+Breakdown :
+
+- `bg-red`: initial style.
+- `max-md:bg-red`: fallback for smaller than md.
+- `md:bg-blue`: blue background on medium screen.
+
+You need to know :
+
+Since tenoxui using JavaScript for handling all of the styles, the responsive design is also handled by JavaScript. If you want to add the responsive breakpoint to your element, you `must` avoid this kind of class names :
+
+```html
+<div class="bg-red md:bg-blue"></div>
+```
+
+It didn't know the styles that need to add below the medium screen. So, if you use that, the background will `stay` blue when your screen get smaller. Instead, use this :
+
+```html
+<div class="bg-red max-md:bg-red md:bg-blue"></div>
+```
+
+Other tips, always add the breakpoint for smaller screen than tye breakpoint you use :
+
+If the breakpoint started with `md` add `max-md:` with the same classname as initial style, in this case is `bg-red` :
+```html
+<div class="bg-red max-md:bg-red md:bg-blue"></div>
+```
+It's same for other breakpoints, if you use `lg` for example :
+```html
+<div class="bg-red max-lg:bg-red lg:bg-blue"></div>
+```
+
+We're sorry if it makes your class name more larger, but this is only handled full by JavaScript.
+
+
+
+## Customizing Breakpoints
+
+You can use `use` function to customize your breakpoints. Example :
+
+```js
+use({
+  property: [...],
+  breakpoint: [
+    { name: "xxl", min: 1440 },
+    { name: "xs", min: 0, max: 554 },
+  ]
+});
+```

@@ -1,0 +1,130 @@
+---
+title: Type and Property
+---
+
+# Type and Property
+
+Types and propeties is class name settings for tenoxui, it's just bunch of classname prefix and declared property for its prefix. Example :
+
+```js
+{
+  // type: property
+  m: "margin",
+  fs: "fontSize"
+}
+```
+
+## Type
+
+`Type` is the prefix that will triggered its property, this is also can be called as a shorthand that will trigger the property. In the example above, the `m` and `fs` is what we called type.
+
+## Property
+
+`Property` is what css property will given to the `type` we declared. From the example above, the `margin` and `fontSize` is called property. So basically, `property` is CSS property where the `type` should give the values. 
+
+```js title="Default types and properties"
+{ 
+  p: "padding",
+  tc: "color",
+  "my-type": "backgroundColor" 
+}
+```
+
+`Property` is not always a `CSS property`, you can also define `CSS variable` using it, and instead of set value for the CSS property, it will set values for the defined property.
+
+## All Propeties
+
+This is what property you can add or use :
+
+### 1. Single CSS Property
+
+This is simple type with `single` CSS property :
+
+```js
+{ 
+  m: "margin",
+  over: "overflow",
+  ratio: "aspectRatio",
+}
+```
+
+:::tip
+
+You can also define property using `kebab-type`, like this :
+
+```js
+{ 
+  ai: "align-items",
+  "w-mx": "max-width"
+}
+```
+:::
+
+
+### 2. Multiple Properties
+
+You can also use an array with multiple `CSS propeties` inside of it. Here's some examples :
+
+```js
+{ 
+  mx: ["marginLeft", "marginRight"],
+  box: ["width", "height"],
+  "flex-parent": ["alignItems", "justifyContent"],
+}
+```
+
+As you can see, we define the `property` as array, and it will set values for both properties. Example :
+
+We define `mx` type for setting `margin-right` and `margin-left` propeties, so if you use it to your element like this :
+
+```html
+<div class="mx-2rem"></div>
+```
+
+And it will rendered as :
+
+```html
+<div class="mx-2rem" style="margin-left: 2rem; margin-right: 2rem;"></div>
+```
+
+So, it will set `2rem` for both properties.
+
+### 3. CSS Variable as Property
+
+You can also define `CSS variable` as the property, like this :
+
+```js 
+{
+  size: "--size",
+  "custom-color": "--my-color",
+  "var-bg": "--back",
+}
+```
+
+Now, how can i use it? See [CSS Variable](/docs/core/css-variable).
+
+### 4. Prefixes
+
+Maybe you wanna add prefixes, you can add just like regular property :
+
+```js 
+{
+  "web-tr": "-webkit-transition",
+  "moz-br": "mozBorderRadius",
+}
+```
+
+:::info
+The examples above can be used direclty inside `use` function, like this :
+
+```js
+use({ 
+  property: [{
+    m: "margin",
+    mx: ["marginLeft", "marginRight"],
+  }] 
+});
+```
+
+Also, if you don't wanna add your types and properties one by one, we have a library that contain all types you may need, see [@tenoxui/property on GitHub](https://github.com/tenoxui/property).
+:::
